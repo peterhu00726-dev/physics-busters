@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>極客科學解密局 - 用宇宙至理強行科學破迷思</title>
+    <title>極客科學解密局 - 用宇宙至理強行科學破迷思 | ScienceBusters</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Font Awesome Icons -->
@@ -36,7 +36,6 @@
             font-family: 'Orbitron', sans-serif;
         }
 
-        /* Neon boundaries and custom effects */
         .neon-blue {
             box-shadow: 0 0 20px rgba(59, 130, 246, 0.15);
             border: 1px solid rgba(59, 130, 246, 0.3);
@@ -62,7 +61,6 @@
             animation: pulse-slow 8s infinite ease-in-out;
         }
 
-        /* Rotation */
         @keyframes rotate-slow {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -74,11 +72,11 @@
 </head>
 <body class="text-gray-100 min-h-screen flex flex-col justify-between cyber-grid relative overflow-x-hidden">
 
-    <!-- Background decorative blur spheres -->
+    <!-- 背景裝飾發光球 -->
     <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-blue-900/10 blur-[120px] glow-sphere pointer-events-none"></div>
     <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-emerald-900/10 blur-[120px] glow-sphere pointer-events-none" style="animation-delay: -4s;"></div>
 
-    <!-- Top Navigation Bar -->
+    <!-- 頂部導覽列 -->
     <header class="border-b border-gray-800/80 bg-gray-950/80 backdrop-blur-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex flex-row justify-between items-center">
             <div class="flex items-center space-x-3">
@@ -89,85 +87,59 @@
                     <h1 class="text-lg md:text-2xl font-black tracking-wider tech-font text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">
                         SCIENCE BUSTERS
                     </h1>
-                    <p class="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase">極客科學解密局 ‧ 萬物真相終極研究室</p>
+                    <p id="nav-subtitle" class="text-[10px] md:text-xs text-gray-400 font-medium tracking-widest uppercase">極客科學解密局 ‧ 萬物真相終極研究室</p>
                 </div>
             </div>
             <div>
                 <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] md:text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shadow-sm">
                     <span class="w-1.5 h-1.5 mr-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-                    <span class="hidden md:inline">安全沙盒連線</span>
-                    <span class="md:hidden">已連線</span>
+                    <span id="nav-status-text" class="hidden md:inline">安全沙盒連線</span>
+                    <span id="nav-status-mobile" class="md:hidden">已連線</span>
                 </span>
             </div>
         </div>
     </header>
 
-    <!-- Main Content Area -->
+    <!-- 主要內容區 -->
     <main class="flex-grow max-w-5xl w-full mx-auto px-4 py-8 md:py-12 z-10">
         
-        <!-- Manifesto Header -->
+        <!-- 核心精神宣言 -->
         <div class="text-center mb-8 md:mb-12">
-            <span class="inline-block text-xs font-bold tracking-widest text-blue-500 uppercase bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20">
+            <span id="manifesto-tag" class="inline-block text-xs font-bold tracking-widest text-blue-500 uppercase bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20">
                 SYSTEM ACTIVE // 萬物皆可科學解釋
             </span>
             <div class="max-w-3xl mx-auto mt-4 mb-4">
-                <h2 class="text-2xl md:text-4xl font-black tracking-tight leading-snug md:leading-tight text-white inline-block text-center w-full">
+                <h2 id="manifesto-title" class="text-2xl md:text-4xl font-black tracking-tight leading-snug md:leading-tight text-white inline-block text-center w-full">
                     「世上沒有魔法，只有未被說明的物理量。」
                 </h2>
             </div>
-            <p class="text-gray-400 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed px-2">
-                不論是深夜的異常聲響、睡夢中全身無法動彈的狀態、還是光影折射的視覺落差... 在本局的熱力學與多維量子演算法前，所有神秘事件都將被還原為無害、安全的自然常數。
+            <p id="manifesto-desc" class="text-gray-400 max-w-2xl mx-auto text-xs md:text-sm leading-relaxed px-2">
+                不論是深夜的異常聲響、睡夢中全身無法動彈的狀態、還是歷史上著名的神秘照片... 在解密局的科學常數與實證證據前，所有事件都將被強制還原為安全、無害的真相。
             </p>
         </div>
 
-        <!-- Input and Control Panel -->
+        <!-- 輸入與控制面板 -->
         <div class="bg-gray-900/60 rounded-2xl p-5 md:p-8 mb-8 border border-gray-800/80 neon-blue backdrop-blur-md">
             
-            <!-- Computation Engine Status -->
+            <!-- 算力狀態 -->
             <div class="mb-6 p-4 bg-gray-950/80 rounded-xl border border-gray-800/80 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
                 <div class="flex items-center space-x-2.5">
                     <div class="w-2.5 h-2.5 rounded-full bg-blue-400 animate-pulse"></div>
                     <div>
                         <div class="text-xs font-bold text-gray-300">
-                            解密算力核心：<span id="coreStatus" class="text-blue-400">本機離線安全核心</span>
+                            <span id="core-title">解密算力核心：</span><span id="coreStatus" class="text-blue-400">本地離線安全解密晶片已載入</span>
                         </div>
-                        <div class="text-[10px] text-gray-500 mt-0.5">預設使用超高精度本地物理知識庫，完全保護隱私</div>
+                        <div id="core-desc" class="text-[10px] text-gray-500 mt-0.5">內建高精度物理、化學與神經醫學數據庫，秒級離線運算</div>
                     </div>
                 </div>
-                <!-- Toggle API Key configuration -->
-                <button onclick="toggleApiPanel()" class="text-xs text-gray-400 hover:text-blue-400 flex items-center space-x-1 transition-colors bg-gray-900 px-2.5 py-1.5 rounded-lg border border-gray-800">
-                    <i class="fa-solid fa-key"></i>
-                    <span id="apiBtnText">配置 Gemini 雲端算力</span>
-                </button>
             </div>
 
-            <!-- Hidden API Key Panel -->
-            <div id="apiPanel" class="hidden mb-6 p-4 bg-blue-950/10 border border-blue-900/30 rounded-xl transition-all">
-                <h4 class="text-xs font-bold text-blue-400 mb-2 flex items-center">
-                    <i class="fa-solid fa-gear mr-1.5"></i>配置 Google Gemini API 金鑰 (選填)
-                </h4>
-                <p class="text-[10px] text-gray-400 mb-3 leading-relaxed">
-                    若希望啟用即時、無限想像力的 AI 智慧分析，可在下方貼上您的 Gemini API Key。若不填寫，系統將自動以本機預置的極客物理模型為您解密，一樣精彩！
-                </p>
-                <div class="flex gap-2">
-                    <input 
-                        type="password" 
-                        id="userApiKey" 
-                        placeholder="在此貼上您的 AI Key (AI_KEY_...)" 
-                        class="flex-grow bg-gray-950 border border-gray-800 rounded-lg px-3 py-1.5 text-xs text-gray-200 focus:outline-none focus:border-blue-500"
-                    >
-                    <button onclick="saveApiKey()" class="bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold px-4 py-1.5 rounded-lg transition-colors">
-                        套用
-                    </button>
-                </div>
-            </div>
-
-            <!-- Text input -->
+            <!-- 故事輸入 -->
             <div class="mb-5">
                 <div class="flex justify-between items-center mb-2.5">
-                    <label for="ghostStory" class="text-xs md:text-sm font-bold text-blue-400 flex items-center">
+                    <label id="input-label" class="text-xs md:text-sm font-bold text-blue-400 flex items-center">
                         <i class="fa-solid fa-mask mr-2 text-blue-400 animate-bounce"></i>
-                        <span>請描述您遭遇的神祕現象或不解事件</span>
+                        <span>請描述您遭遇的神祕現象、鬼故事或歷史事件</span>
                     </label>
                     <span id="charCount" class="text-xs text-gray-500 tech-font">0 / 1000</span>
                 </div>
@@ -180,52 +152,52 @@
                 ></textarea>
             </div>
 
-            <!-- Depth and Trigger buttons -->
+            <!-- 深度與解密按鈕 -->
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                <!-- Short/Long Depth Selector -->
+                <!-- 解析深度 -->
                 <div class="bg-gray-950/90 p-1.5 rounded-xl border border-gray-800 flex items-center">
-                    <span class="text-xs text-gray-500 px-3 font-bold hidden sm:inline">解析深度:</span>
+                    <span id="depth-label" class="text-xs text-gray-500 px-3 font-bold hidden sm:inline">解析深度:</span>
                     <div class="grid grid-cols-2 gap-1 w-full">
                         <button id="depth-short" onclick="setDepth('short')" class="py-2 text-center text-xs font-bold rounded-lg transition-all bg-gray-900 text-gray-400 hover:text-white">
-                            ⚡ 短篇精悍 (快速解答)
+                            ⚡ 短篇精悍
                         </button>
                         <button id="depth-long" onclick="setDepth('long')" class="py-2 text-center text-xs font-bold rounded-lg transition-all bg-blue-600 text-white shadow-sm">
-                            📚 學術長篇 (深度探究)
+                            📚 學術長篇
                         </button>
                     </div>
                 </div>
 
-                <!-- Run Analysis Button -->
+                <!-- 啟動按鈕 -->
                 <button 
                     id="analyseBtn"
                     onclick="dispatchBusting()" 
                     class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 hover:from-blue-500 hover:via-indigo-500 hover:to-emerald-500 text-white font-bold py-3 px-6 rounded-xl shadow-lg transition-all flex items-center justify-center space-x-2 text-sm md:text-base hover:scale-[1.01] active:scale-[0.99] group"
                 >
                     <i class="fa-solid fa-magnifying-glass-chart group-hover:rotate-12 transition-transform"></i>
-                    <span>開啟科學視角，破解迷思</span>
+                    <span id="btn-decrypt-text">開啟科學天眼，破解迷思</span>
                 </button>
             </div>
 
-            <!-- Quick templates -->
+            <!-- 快速測試範本 -->
             <div>
-                <span class="text-[11px] font-bold text-gray-500 block mb-2.5">
-                    <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-blue-400"></i>快速載入解密測試樣本：
+                <span id="templates-label" class="text-[11px] font-bold text-gray-500 block mb-2.5">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-blue-400"></i>快速載入測試樣本：
                 </span>
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
-                    <button onclick="fillTemplate('ghost-press')" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                    <button onclick="fillTemplate('ghost-press')" id="btn-t1" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
                         <span>💤 睡夢中全身動彈</span>
                         <i class="fa-solid fa-chevron-right text-[9px] text-gray-600"></i>
                     </button>
-                    <button onclick="fillTemplate('ghost-sound')" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                    <button onclick="fillTemplate('ghost-sound')" id="btn-t2" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
                         <span>🚪 深夜怪異敲擊聲</span>
                         <i class="fa-solid fa-chevron-right text-[9px] text-gray-600"></i>
                     </button>
-                    <button onclick="fillTemplate('ghost-doll')" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
-                        <span>🧸 似乎位移的舊玩具</span>
+                    <button onclick="fillTemplate('ghost-ufo')" id="btn-t3" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                        <span>👽 羅斯威爾 UFO</span>
                         <i class="fa-solid fa-chevron-right text-[9px] text-gray-600"></i>
                     </button>
-                    <button onclick="fillTemplate('ghost-lift')" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
-                        <span>🛗 電梯停靠無人樓層</span>
+                    <button onclick="fillTemplate('ghost-ness')" id="btn-t4" class="text-[11px] bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-2 rounded-lg border border-gray-855 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                        <span>🦕 尼斯湖水怪照片</span>
                         <i class="fa-solid fa-chevron-right text-[9px] text-gray-600"></i>
                     </button>
                 </div>
@@ -233,7 +205,7 @@
 
         </div>
 
-        <!-- Loading state -->
+        <!-- 運算中動畫 -->
         <div id="loadingState" class="hidden my-12 text-center py-10 bg-gray-900/30 rounded-2xl border border-gray-800/50 backdrop-blur-sm">
             <div class="inline-block relative w-20 h-20 mb-4">
                 <div class="absolute inset-0 rounded-full border-2 border-t-blue-500 border-r-transparent border-b-transparent border-l-transparent animate-spin" style="animation-duration: 0.8s;"></div>
@@ -242,89 +214,85 @@
                     <i class="fa-solid fa-satellite-dish text-blue-400 text-lg animate-pulse"></i>
                 </div>
             </div>
-            <h3 class="text-md font-bold text-gray-200 tech-font tracking-widest uppercase">DECONSTRUCTING PARANORMAL SIGNAL</h3>
-            <p id="loadingTip" class="text-xs text-emerald-400 mt-2.5 font-mono">正在調用拉普拉斯妖模擬器解算微觀粒子動量...</p>
+            <h3 class="text-md font-bold text-gray-200 tech-font tracking-widest uppercase">DECONSTRUCTING SIGNAL</h3>
+            <p id="loadingTip" class="text-xs text-emerald-400 mt-2.5 font-mono">正在調用拉普拉斯妖模擬器解算微觀粒子物理常數...</p>
         </div>
 
-        <!-- Science Report Output Section -->
+        <!-- 解密結果面板 -->
         <div id="resultPanel" class="hidden transition-all duration-700 ease-in-out transform translate-y-4">
             <div class="border-t border-gray-800/80 my-8"></div>
             
             <div class="flex flex-row items-center justify-between mb-5 gap-3">
                 <div class="flex items-center space-x-2.5">
                     <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-                    <h3 class="text-lg md:text-2xl font-black tracking-tight text-white">解密局 ‧ 分析報告</h3>
+                    <h3 id="panel-res-title" class="text-lg md:text-2xl font-black tracking-tight text-white">解密局 ‧ 分析報告</h3>
                 </div>
                 <button onclick="shareResult()" class="text-xs text-gray-300 hover:text-white bg-gray-800/85 hover:bg-gray-700 px-3.5 py-2 rounded-xl border border-gray-700/60 flex items-center space-x-1.5 transition-all">
                     <i class="fa-solid fa-copy"></i>
-                    <span>複製本篇解密報告</span>
+                    <span id="btn-copy-text">複製本篇解密報告</span>
                 </button>
             </div>
 
-            <!-- Tab Switcher -->
+            <!-- 版本頁籤 -->
             <div class="grid grid-cols-3 gap-2 mb-5">
                 <button id="tab-classical" onclick="switchTab('classical')" class="py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200">
-                    <i class="fa-solid fa-temperature-low mr-1 block md:inline mb-1 md:mb-0 text-amber-500"></i>熱力與古典物理
+                    <i class="fa-solid fa-temperature-low mr-1 block md:inline mb-1 md:mb-0 text-amber-500"></i><span id="tab-label-classical">熱力與古典物理</span>
                 </button>
                 <button id="tab-quantum" onclick="switchTab('quantum')" class="py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200">
-                    <i class="fa-solid fa-infinity mr-1 block md:inline mb-1 md:mb-0 text-cyan-400"></i>量子與多維宇宙
+                    <i class="fa-solid fa-infinity mr-1 block md:inline mb-1 md:mb-0 text-cyan-400"></i><span id="tab-label-quantum">量子與多維宇宙</span>
                 </button>
                 <button id="tab-neuro" onclick="switchTab('neuro')" class="py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200">
-                    <i class="fa-solid fa-brain mr-1 block md:inline mb-1 md:mb-0 text-purple-400"></i>生物與神經化學
+                    <i class="fa-solid fa-brain mr-1 block md:inline mb-1 md:mb-0 text-purple-400"></i><span id="tab-label-neuro">生物與神經化學</span>
                 </button>
             </div>
 
-            <!-- Report Card with Dynamic Visuals -->
-            <div class="bg-gray-900/40 rounded-2xl border border-gray-800/80 p-5 md:p-8 neon-emerald backdrop-blur-md">
+            <!-- 報告呈現卡片 -->
+            <div id="reportCard" class="bg-gray-900/40 rounded-2xl border border-gray-800/80 p-5 md:p-8 neon-emerald backdrop-blur-md">
                 
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
                     
-                    <!-- Left: Explanation Text -->
+                    <!-- 左欄：科學解釋文字 -->
                     <div class="lg:col-span-7 prose prose-invert max-w-none">
                         
-                        <!-- Core Law -->
+                        <!-- 核心科學定律 -->
                         <div class="bg-gray-950/90 p-4 rounded-xl border border-gray-800/80 mb-5 flex items-start space-x-3">
                             <div class="text-emerald-400 text-xl mt-1">
                                 <i class="fa-solid fa-wave-square"></i>
                             </div>
                             <div>
-                                <div class="text-[10px] text-gray-500 uppercase tracking-widest tech-font font-bold">Scientific Core Law / 核心科學定律</div>
+                                <div id="core-law-tag" class="text-[10px] text-gray-500 uppercase tracking-widest tech-font font-bold">Scientific Core Law / 核心科學定律</div>
                                 <div id="scientificPrinciple" class="text-sm md:text-base font-bold text-emerald-400 mt-0.5">載入中...</div>
                             </div>
                         </div>
 
-                        <!-- Core content body -->
+                        <!-- 核心內容 -->
                         <div id="explanationBody" class="text-gray-300 leading-relaxed text-sm md:text-base space-y-4 whitespace-pre-wrap font-normal font-sans">
-                            正在載入科學解釋的內容...
+                            正在載入解密數據...
                         </div>
 
-                        <!-- NEW: Verification and Evidence Button -->
+                        <!-- 檢視文獻與證據按鈕 -->
                         <div class="mt-6 pt-4 border-t border-gray-800/60">
                             <button onclick="toggleEvidencePanel()" class="w-full bg-gray-950 hover:bg-gray-900 text-xs text-blue-400 hover:text-blue-300 font-bold py-3 px-4 rounded-xl border border-gray-800 hover:border-blue-500/30 flex items-center justify-center space-x-2 transition-all">
                                 <i class="fa-solid fa-graduation-cap"></i>
-                                <span>🔍 檢視真實文獻與相關研究探討</span>
+                                <span id="btn-evidence-text">🔍 檢視真實文獻與相關研究探討</span>
                             </button>
                         </div>
                     </div>
 
-                    <!-- Right: High-quality SVG Visual Panel -->
+                    <!-- 右欄：SVG 動態建模面板 -->
                     <div class="lg:col-span-5 flex flex-col items-center justify-center bg-gray-950/85 border border-gray-800 p-6 rounded-2xl relative overflow-hidden">
-                        <!-- Grid decorative background -->
                         <div class="absolute inset-0 cyber-grid opacity-10 pointer-events-none"></div>
                         
-                        <!-- Header tag -->
                         <div class="text-center mb-4 z-10">
-                            <span class="text-[10px] font-bold tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                            <span id="visual-tag-label" class="text-[10px] font-bold tracking-widest text-emerald-400 uppercase bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
                                 <i class="fa-solid fa-chart-line mr-1"></i>動態物理特徵建模
                             </span>
                         </div>
 
-                        <!-- Visual container -->
                         <div id="scienceVisualizer" class="w-full aspect-square max-w-[280px] flex items-center justify-center z-10 transition-all duration-500">
-                            <!-- SVGs will be dynamically loaded here -->
+                            <!-- SVGs Loaded Dynamically -->
                         </div>
 
-                        <!-- Status bar -->
                         <div class="w-full border-t border-gray-800/80 mt-4 pt-3 flex justify-between items-center text-[10px] text-gray-500 tech-font font-bold z-10">
                             <div class="flex items-center space-x-1.5">
                                 <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
@@ -336,34 +304,33 @@
 
                 </div>
 
-                <!-- Toggleable Academic Evidence Modal / Panel -->
+                <!-- 真實文獻面板 -->
                 <div id="evidencePanel" class="hidden mt-6 p-5 bg-gray-950/95 border border-blue-900/40 rounded-2xl transition-all duration-500">
                     <div class="flex items-center justify-between mb-4 pb-2 border-b border-gray-800/80">
-                        <h4 class="text-sm font-bold text-blue-400 flex items-center">
-                            <i class="fa-solid fa-book-bookmark mr-2"></i>學術實證追蹤面板 (Academic Evidence & Integrity)
+                        <h4 id="evidence-panel-header" class="text-sm font-bold text-blue-400 flex items-center">
+                            <i class="fa-solid fa-book-bookmark mr-2"></i>學術實證追蹤面板 (Academic Evidence)
                         </h4>
                         <button onclick="toggleEvidencePanel()" class="text-gray-500 hover:text-white text-xs">
                             <i class="fa-solid fa-xmark"></i>
                         </button>
                     </div>
-                    <p class="text-xs text-gray-400 leading-relaxed mb-4">
-                        為了確保科學透明性，解密局在此提供本原理對應的<b>真實學術文獻、科學教科書出處與相關科學研究</b>。您可以直接前往 Google 學術搜尋（Google Scholar）驗證其真實論述。
+                    <p id="evidence-panel-desc" class="text-xs text-gray-400 leading-relaxed mb-4">
+                        為了確保科學透明性，本局在此提供對應的<b>真實學術文獻、科學教科書出處與相關科學研究</b>。您可以前往 Google 學術搜尋（Google Scholar）驗證其真實論述。
                     </p>
                     
-                    <!-- Evidence dynamic list -->
                     <div id="evidenceList" class="space-y-3">
-                        <!-- Evidence items injected by JavaScript -->
+                        <!-- Evidence list dynamically generated -->
                     </div>
                 </div>
 
-                <!-- Footer disclaimer inside card -->
+                <!-- 卡片底部標籤 -->
                 <div class="mt-8 pt-4 border-t border-gray-800/60 flex flex-col md:flex-row justify-between items-start md:items-center text-xs text-gray-500 gap-2">
                     <div class="flex items-center space-x-2">
                         <i class="fa-solid fa-shield-halved text-emerald-500/60"></i>
-                        <span id="outputEngineInfo">解密分析模組：本機特置物理常數模型</span>
+                        <span id="outputEngineInfo">解密分析模組：本地離線高精度量子晶片</span>
                     </div>
                     <div>
-                        <span>*本報告基於自然法則，請放心保持科學求真態度。</span>
+                        <span id="card-footer-alert">*本報告基於已知自然法則與科學實證，請放心保持求真態度。</span>
                     </div>
                 </div>
             </div>
@@ -371,115 +338,248 @@
 
     </main>
 
-    <!-- Footer -->
-    <footer class="border-t border-gray-900/80 bg-gray-950/60 py-6 text-xs text-gray-500">
-        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
-            <div>
-                <p class="font-semibold text-gray-400">© 2026 極客科學解密局 (ScienceBusters). 保留所有科學權利。</p>
-                <p class="mt-1 text-gray-600">本網站完全運行於安全客戶端，遵守物理、化學與宇宙最高秩序常數。</p>
-            </div>
-            <div class="flex space-x-4 text-[10px] md:text-xs">
-                <span class="hover:text-gray-300 transition-colors">$E = mc^2$</span>
-                <span>•</span>
-                <span class="hover:text-gray-300 transition-colors">$S = k \ln \Omega$</span>
-                <span>•</span>
-                <span class="hover:text-gray-300 transition-colors">$i\hbar \frac{\partial}{\partial t} |\Psi\rangle = \hat{H} |\Psi\rangle$</span>
-            </div>
+    <!-- 底部語系切換選單與聲明 -->
+    <footer class="border-t border-gray-900 bg-gray-950/80 text-center py-6 px-4 flex flex-col items-center justify-center gap-4">
+        
+        <!-- 語言下拉選單 -->
+        <div class="flex items-center space-x-2 bg-gray-900 px-3.5 py-2 rounded-xl border border-gray-800 hover:border-blue-500/30 transition-all">
+            <label for="langSelect" class="text-xs text-gray-400 font-bold flex items-center gap-1.5 cursor-pointer">
+                <i class="fa-solid fa-earth-americas text-blue-400"></i> 
+                <span id="select-lang-label">選擇顯示語系 / Language:</span>
+            </label>
+            <select id="langSelect" onchange="changeLanguage(this.value)" class="bg-gray-950 text-xs text-blue-400 font-bold focus:outline-none cursor-pointer border-none p-1 rounded-lg">
+                <option value="zh">繁體中文 (ZH)</option>
+                <option value="en">English (EN)</option>
+            </select>
+        </div>
+
+        <div class="text-[10px] text-gray-600 font-medium tracking-widest uppercase">
+            &copy; 2026 SCIENCE BUSTERS. ALL RIGHTS RESERVED. QUANTUM ENCRYPTED.
         </div>
     </footer>
 
-    <!-- Toast Notification -->
+    <!-- 輕提示 -->
     <div id="toast" class="fixed bottom-6 right-6 bg-gray-900/95 border border-emerald-500/30 text-emerald-400 px-5 py-3.5 rounded-xl shadow-2xl flex items-center space-x-3 transform translate-y-24 opacity-0 transition-all duration-300 z-50 backdrop-blur-md">
         <i class="fa-solid fa-circle-check text-lg"></i>
         <span id="toastMsg" class="font-medium">已成功處理</span>
     </div>
 
-    <!-- Core Scripting Logic -->
+    <!-- 核心數據庫與 JavaScript 控制邏輯 -->
     <script>
-        // Local Cache of Detailed Explanations
-        let localAnalysisCache = {
-            short: {
-                classical: {
-                    principle: "熱力學第二定律 & 機械聲波縱向共振現象",
-                    text: "從古典熱力學來解構此事件：深夜氣溫驟降，房屋的混凝土與木質地板會因為日夜溫差進行微米級的收縮。這種收縮累積到臨界點時，會產生微小的彈性形變並瞬間釋放應力，在空氣中產生機械縱波。當這些縱波在你房間狹窄的牆壁間反射，就會形成諧振與駐波，聽起來極像腳步聲或物品移動。這完全是牛頓力學的溫差展現，並非超自然力量。"
+        let currentLang = 'zh';
+
+        // 靈異故事與歷史事件範本庫 (Bilingual templates)
+        const templates = {
+            zh: {
+                'ghost-press': "昨天睡到半夜，我突然清醒過來。我的意識非常清醒，甚至可以看清床邊的窗簾，但我卻發現全身完全動彈不得，像是被一股無形的力量死死按在床上。同時我的胸口壓迫感極重，幾乎喘不過氣，耳朵裡還隱約傳來尖銳的耳鳴聲。這到底是什麼物理原因？",
+                'ghost-sound': "自從上週搬入這間舊公寓後，每到凌晨兩、三點，客廳空無一人時，我就會隱約聽到廚房裡傳來不規律的『叩、叩』敲門聲，有時甚至是金屬湯匙碰撞的聲音。但我過去看，卻空無一人。一關上燈回到房間，聲音又再度響起，這有什麼科學物理解釋嗎？",
+                'ghost-ufo': "1947年美國新墨西哥州羅斯威爾發生的UFO墜毀事件，網路上有人說軍方尋獲了外星人屍體和飛碟殘骸，這在科學與情報學上是真的外星人造訪嗎？還是一場刻意為之的資訊掩蓋與偽造？",
+                'ghost-ness': "著名的1934年尼斯湖水怪「外科醫生照片」（Surgeon's Photograph），清晰拍到了水怪長長的脖子浮出水面。這張照片是真的嗎？水怪真的存在嗎？"
+            },
+            en: {
+                'ghost-press': "I woke up in the middle of the night. My mind was completely awake, but I found myself entirely unable to move, as if pinned down by an invisible force. There was a heavy pressure on my chest and a sharp ringing sound in my ears. What is the physical explanation for this?",
+                'ghost-sound': "Since moving into this old apartment, every night between 2 and 3 AM, I hear irregular 'tap, tap' sounds coming from the empty living room or kitchen cabinet doors creaking. But when I turn on the light to check, it's completely empty. What physics principles are causing this?",
+                'ghost-ufo': "The famous 1947 Roswell UFO incident in New Mexico. Many claim a flying saucer crashed and extraterrestrial bodies were recovered. Is this a genuine alien encounter or a historically engineered cover-up and hoax?",
+                'ghost-ness': "The famous 1934 Loch Ness Monster 'Surgeon's Photograph' showing a long dinosaur-like neck rising from the water. Is this photograph real? Does Nessie actually exist?"
+            }
+        };
+
+        // 多語系介面字典 (UI i18n Dictionary)
+        const i18n = {
+            zh: {
+                subtitle: "極客科學解密局 ‧ 萬物真相終極研究室",
+                status: "安全沙盒連線",
+                tag: "SYSTEM ACTIVE // 萬物皆可科學解釋",
+                title: "「世上沒有魔法，只有未被說明的物理量。」",
+                desc: "不論是深夜的異常聲響、睡夢中全身無法動彈的狀態、還是歷史上著名的神秘照片... 在解密局的科學常數與實證證據前，所有事件都將被強制還原為安全、無害的真相。",
+                coreTitle: "解密算力核心：",
+                coreStatus: "本地離線安全解密晶片已載入",
+                coreDesc: "內建高精度物理、化學與神經醫學數據庫，秒級離線運算",
+                inputLabel: "請描述您遭遇的神祕現象、鬼故事或歷史事件",
+                placeholder: "範例：昨晚一個人睡覺時，感覺房間溫度突然變得很冰冷，窗外還傳來不規律的敲擊聲，這背後有什麼科學原理嗎？",
+                depthLabel: "解析深度:",
+                btnDecrypt: "開啟科學天眼，破解迷思",
+                templatesLabel: "快速載入測試樣本：",
+                t1: "💤 睡夢中全身動彈",
+                t2: "🚪 深夜怪異敲擊聲",
+                t3: "👽 羅斯威爾 UFO",
+                t4: "🦕 尼斯湖水怪照片",
+                resTitle: "解密局 ‧ 分析報告",
+                btnCopy: "複製本篇解密報告",
+                tabClassical: "熱力與古典物理",
+                tabQuantum: "量子與多維宇宙",
+                tabNeuro: "生物與神經化學",
+                visualTag: "動態物理特徵建模",
+                btnEvidence: "🔍 檢視真實文獻與相關研究探討",
+                evidenceHeader: "學術實證追蹤面板 (Academic Evidence)",
+                evidenceDesc: "為了確保科學透明性，本局在此提供對應的<b>真實學術文獻、科學教科書出處與相關科學研究</b>。您可以前往 Google 學術搜尋（Google Scholar）驗證其真實論述。",
+                engineInfo: "解密分析模組：本地離線高精度量子晶片",
+                footerAlert: "*本報告基於已知自然法則與科學實證，請放心保持求真態度。",
+                selectLang: "選擇顯示語系 / Language:",
+                loadingTip: "正在調用拉普拉斯妖模擬器解算微觀粒子物理常數...",
+                copied: "解密分析報告已成功複製至剪貼簿！",
+                copyFailed: "複製失敗，請手動複製。",
+                enterPrompt: "請先輸入您要強行物理解釋的現象！"
+            },
+            en: {
+                subtitle: "Science Busters ‧ Ultimate Reality Lab",
+                status: "Sandbox Connected",
+                tag: "SYSTEM ACTIVE // Everything is Physics",
+                title: "\"There is no magic, only unexplained physical quantities.\"",
+                desc: "Whether it is an anomaly sound at midnight, sleep paralysis, or legendary hoax photographs... Before our thermodynamic and cognitive models, all mysteries are reduced to harmless natural constants and empirical truths.",
+                coreTitle: "Decryption Engine: ",
+                coreStatus: "Local Offline Decryption Chip Loaded",
+                coreDesc: "Built-in database for physics, chemistry, and clinical medicine. High-speed local computations.",
+                inputLabel: "Describe the supernatural event, ghost story, or historic mystery",
+                placeholder: "e.g., Last night I slept alone and felt the room temperature drop suddenly with strange tapping noises outside...",
+                depthLabel: "Analysis Depth:",
+                btnDecrypt: "Activate Scientific Eye & Decrypt",
+                templatesLabel: "Quick Load Samples:",
+                t1: "💤 Sleep Paralysis",
+                t2: "🚪 Midnight Knocking Noise",
+                t3: "👽 Roswell UFO Crash",
+                t4: "🦕 Loch Ness Photo",
+                resTitle: "Science Busters ‧ Report",
+                btnCopy: "Copy Decryption Report",
+                tabClassical: "Classical & Thermal",
+                tabQuantum: "Quantum & Multiverse",
+                tabNeuro: "Bio & Neurochemistry",
+                visualTag: "Dynamic Physical Modeling",
+                btnEvidence: "🔍 View Academic Papers & Empirical Evidence",
+                evidenceHeader: "Academic Evidence Tracking Panel",
+                evidenceDesc: "To ensure scientific transparency, we provide corresponding <b>authentic academic papers, textbook citations, and studies</b>. You can verify them on Google Scholar.",
+                engineInfo: "Decryption Module: Local Offline High-Precision Quantum Chip",
+                footerAlert: "*This report is based on known natural laws and empirical research. Stay curious and rational.",
+                selectLang: "選擇顯示語系 / Language:",
+                loadingTip: "DECONSTRUCTING SIGNAL... RESOLVING MACROSCOPIC ENTROPY QUANTITIES...",
+                copied: "Report copied to clipboard successfully!",
+                copyFailed: "Failed to copy. Please copy manually.",
+                enterPrompt: "Please enter a supernatural event to decrypt first!"
+            }
+        };
+
+        // 本地預置的高精度解密知識庫（Bilingual dataset with LaTeX）
+        const mockDatabase = {
+            zh: {
+                short: {
+                    classical: {
+                        principle: "熱力學第二定律 & 機械聲波縱向共振現象",
+                        text: "從古典熱力學來解構此事件：深夜氣溫驟降，房屋的混凝土與木質地板會因為日夜溫差進行微米級的收縮。這種收縮累積到臨界點時，會產生微小的彈性形變並瞬間釋放應力，在空氣中產生機械縱波。當這些縱波在你房間狹窄的牆壁間反射，就會形成諧振與駐波，聽起來極像腳步聲或物品移動。這完全是牛頓力學的溫差展現，並非超自然力量。"
+                    },
+                    quantum: {
+                        principle: "多世界詮釋下的平行宇宙波函數相干微擾",
+                        text: "從量子力學尺度強行解釋：根據量子多世界詮釋，無數個平行宇宙正處於疊加態。在某些微觀環境熱噪聲（Thermal Noise）降低的條件下，您房間微觀的量子波函數 $P(x)$ 發生了極其罕見的相干干涉。簡單來說，另一個平行宇宙中正在該空間活動的你，其機率波包相位微弱地與你所在的宇宙重疊。你沒有遇到異常，這只是微觀世界的一場物理巧合。"
+                    },
+                    neuro: {
+                        principle: "網狀激活系統 (RAS) 疲勞與大腦聽覺皮層信號過度擬合",
+                        text: "從神經科學與認知化學來看，這屬於標準的大腦演化防衛本能。當人體處於深夜或極度疲憊狀態下，負責過濾無用雜訊的「網狀激活系統 (RAS)」過濾效率大幅衰退。此時大腦顳葉為了防範未知的危險（演化自遠古對環境威脅的警惕），會對微弱風聲或水管水流聲進行「過度擬合 (Overfitting)」，強行將無序雜訊組裝成我們熟知的人類腳步聲或陰影。多喝水並保持充足睡眠即可完美排除！"
+                    }
                 },
-                quantum: {
-                    principle: "多世界詮釋下的平行宇宙波函數相干微擾",
-                    text: "從量子力學尺度強行解釋：根據量子多世界詮釋，無數個平行宇宙正處於疊加態中。在某些微觀條件下（例如深夜的低溫降低了微粒分子的干擾），你房間微觀的量子波函數 $P(x)$ 發生了極其罕見的宏觀退相干干涉。簡單來說，另一個平行宇宙中正在該處走動或活動的你，其量子波包相位微弱地與你這個宇宙發生了重疊。你所觀測到的現象，只是微觀物理世界的一場量子巧合。"
-                },
-                neuro: {
-                    principle: "網狀激活系統 (RAS) 疲勞與大腦聽覺皮層信號過度擬合",
-                    text: "從神經科學與認知化學來看，這屬於標準的大腦演化防衛本能。當人體處於深夜或極度疲憊狀態下，負責過濾無用雜訊的「網狀激活系統 (RAS)」過濾效率大幅衰退。此時大腦顳葉為了防範未知的危險（演化自遠古對環境威脅的警惕），會對微弱風聲或水管水流聲進行「過度擬合 (Overfitting)」，強行將無序雜訊組裝成我們熟知的人類腳步聲或陰影。多喝水並保持充足睡眠即可完美排除！"
+                long: {
+                    classical: {
+                        principle: "熱力學第二定律、熱致應力釋放與聲學諧振腔共振",
+                        text: "古典物理學與熱力學為此現象提供了一套無懈可擊的嚴謹解釋。\n\n首先，我們必須探討「熱脹冷縮與熱應力釋放」的力學機制。在建築物建造時，水泥、木材、鐵釘及水管等各種不同材質的膨脹係數大不相同。白天時，陽光輻射使整棟大樓結構溫度上升、體積膨脹並累積彈性應變能；而深夜1點至3點是環境氣溫劇烈下降的黃金時段。隨著溫度梯度變化 $\\Delta T$，建材內部熱應力會進行局部不均勻的彈性釋放。\n\n這種瞬時的應力釋放（例如金屬微小滑移或混凝土裂縫微移）會發出細微的固體傳導聲，稱為彈性應力波。當這種縱波穿過建材、傳播到你房間的空氣介質中，會因為你房間狹長的幾何形狀（兩側平行牆壁構成的聲學諧振腔），在特定頻率上發生駐波（Standing Wave）諧振。\n\n共振效應會將原本微弱的沙沙聲放大，並在空間中產生聽覺上的方向指向性。這也就是為什麼你走過去看時聲音會因氣流改變、聲波波腹偏移而突然「消失」的原因。本質上，這是一場完美的熱力學能量轉移與聲學波形干涉現象，不需要任何超自然解釋。"
+                    },
+                    quantum: {
+                        principle: "宏觀多世界詮釋 (MWI) 疊加態干涉與量子隧穿微弱耦合",
+                        text: "讓我們穿透宏觀常識的表象，從硬核的微觀量子物理學與宇宙拓撲學來強行解算這個事件。\n\n根據休·艾弗雷特提出的「多世界詮釋 (Many-Worlds Interpretation)」，宇宙的狀態由一個整體的波函數 $|\\Psi\\rangle$ 所描述。當多種歷史軌跡演化時，宇宙會不斷分裂成無數個平行世界，而這些世界在微觀尺度上依然存在著波函數的相干性。\n\n在深夜，當你所處的空間環境熱噪聲（Thermal Noise）降低、系統達到微觀上的局部冷卻與動量極小值時，系統的去相干（Decoherence）速率會微幅減緩。這使得另一個平行宇宙中（在那裡，可能有另一個宇宙的你正好起來喝水、或是寵物正在跑動）微粒子的機率波振幅，透過極其罕見的「量子隧穿效應 (Quantum Tunneling)」，跨越了多維空間的能量勢壘，對你所在的宇宙產生了極其微弱的相位疊加與干涉。\n\n簡單來說，你聽到的異常聲音或看到的微小變動，本質上並非任何神秘干擾，而是你與另一個時空的自己在量子尺度上，發生了極微弱的相干諧振。這是一次難得一遇的宏觀物理量子效應觀測，這證明了宇宙多維尺度的真實存在！"
+                    },
+                    neuro: {
+                        principle: "網狀激活系統 (RAS) 疲勞衰退、感覺信號延遲與大腦皮層過度模式擬合",
+                        text: "從神經生物學與認知科學的視角來剖析，這個看似神秘的現象，完全是大腦在特定生理狀態下的一場極為精彩的「資訊解譯偏差與幻覺建構」。\n\n人腦是一台高度發達的「模式識別（Pattern Recognition）機器」，演化自數百萬年前非洲大草原的防禦機制。在遠古時代，那些能在黑暗中把風吹草動「過度解讀」成安全威脅並提高警覺的祖先更容易生存下來，這促成了我們基因中強烈的模式感知傾向。\n\n在深夜或疲憊時，大腦中的網狀激活系統（Reticular Activating System, RAS）以及初級聽覺、視覺皮質正處於半休眠的狀態。此時，對於微弱背景雜訊（如遠處車流聲、冷氣滴水、空氣熱對流）的濾波機制會部分失效。大腦為了安全，會強行調用視覺皮質與聽覺皮質的記憶模板，將這些毫無規律的隨機波形與光影進行「過度擬合 (Overfitting)」，強行組裝、腦補成「腳步聲」、「被扯動的被子」或是「轉動眼睛的娃娃」。\n\n同時，由於神經遞質如多巴胺與褪黑激素的比例在深夜失衡，大腦顳葉可能會產生微弱的放電脈衝，這會放大你的敏感度。所以，這完全是你的生物神經元在發揮自然的防衛與保護行為。多喝水、早點休息，放鬆神經即可物理排除！"
+                    }
                 }
             },
-            long: {
-                classical: {
-                    principle: "熱力學第二定律、熱致結構形變與微弱聲學共振諧振",
-                    text: "古典物理學與熱力學為此現象提供了一套無懈可擊的嚴謹解釋。\n\n首先，我們必須探討「熱脹冷縮與熱應力釋放」的力學機制。在建築物建造時，水泥、木材、鐵釘及水管等各種不同材質的膨脹係數大不相同。白天時，陽光輻射使整棟大樓結構溫度上升、體積膨脹並累積彈性應變能；而深夜1點至3點是環境氣溫劇烈下降的黃金時段。隨著溫度梯度變化 $\\Delta T$，建材內部熱應力會進行局部不均勻的彈性釋放。\n\n這種瞬時的應力釋放（例如金屬微小滑移或混凝土裂縫微移）會發出細微的固體傳導聲，稱為彈性應力波。當這種縱波穿過建材、傳播到你房間的空氣介質中，會因為你房間狹長的幾何形狀（兩側平行牆壁構成的聲學諧振腔），在特定頻率上發生駐波（Standing Wave）諧振。\n\n共振效應會將原本微弱的沙沙聲放大，並在空間中產生聽覺上的方向指向性。這也就是為什麼你走過去看時聲音會因氣流改變、聲波波腹偏移而突然「消失」的原因。本質上，這是一場完美的熱力學能量轉移與聲學波形干涉現象，不需要任何超自然解釋。"
+            en: {
+                short: {
+                    classical: {
+                        principle: "Second Law of Thermodynamics & Acoustic Standing Wave Resonance",
+                        text: "Deconstructing this event thermally: Under dramatic nocturnal cooling, buildings undergo micro-meter level contraction. When thermal stresses release, elastic waves are generated through building frames, transmitting into the air as mechanical waves. These waves reflect between parallel walls, creating resonance that perfectly mimics footsteps. It is a simple physical reaction of temperature differentials, with zero spiritual elements."
+                    },
+                    quantum: {
+                        principle: "Wave Function Interference in Many-Worlds Interpretation (MWI)",
+                        text: "Analyzing from a quantum scale: According to Everett's MWI, infinite parallel universes exist in a massive superposition. When nocturnal conditions lower thermal noise, macroscopic wave decoherence slows down slightly. This causes your probability wave function $P(x)$ to occasionally overlap with another parallel branch where you (or an object) are active. You didn't meet a ghost; you witnessed a rare macroscopic quantum interference."
+                    },
+                    neuro: {
+                        principle: "Reticular Activating System (RAS) Fatigue & Signal Overfitting",
+                        text: "From a neurochemical perspective, this is a standard evolutionary survival trait. Under sleep deprivation or severe fatigue, your brain's RAS filter degrades. The temporal lobe, over-sensitive to potential ancient predators, 'overfits' background noises (such as wind or pipes) into familiar threats like human footsteps. Hydrate, rest, and sleep to easily cure this illusion."
+                    }
                 },
-                quantum: {
-                    principle: "宏觀多世界詮釋 (MWI) 疊加態干涉與量子隧穿微弱耦合",
-                    text: "讓我們穿透宏觀常識的表象，從硬核的微觀量子物理學與宇宙拓撲學來強行解算這個事件。\n\n根據休·艾弗雷特提出的「多世界詮釋 (Many-Worlds Interpretation)」，宇宙的狀態由一個整體的波函數 $|\\Psi\\rangle$ 所描述。當多種歷史軌跡演化時，宇宙會不斷分裂成無數個平行世界，而這些世界在微觀尺度上依然存在著波函數的相干性。\n\n在深夜，當你所處的空間環境熱噪聲（Thermal Noise）降低、系統達到微觀上的局部冷卻與動量極小值時，系統的去相干（Decoherence）速率會微幅減緩。這使得另一個平行宇宙中（在那裡，可能有另一個宇宙的你正好起來喝水、或是寵物正在跑動）微粒子的機率波振幅，透過極其罕見的「量子隧穿效應 (Quantum Tunneling)」，跨越了多維空間的能量勢壘，對你所在的宇宙產生了極其微弱的相位疊加與干涉。\n\n簡單來說，你聽到的異常聲音或看到的微小變動，本質上並非任何神秘干擾，而是你與另一個時空的自己在量子尺度上，發生了極微弱的相干諧振。這是一次難得一遇的宏觀物理量子效應觀測，這證明了宇宙多維尺度的真實存在！"
-                },
-                neuro: {
-                    principle: "網狀激活系統 (RAS) 疲勞衰退、感覺信號延遲與大腦皮層過度模式擬合",
-                    text: "從神經生物學與認知科學 the 視角來剖析，這個看似神秘的現象，完全是大腦在特定生理狀態下的一場極為精彩的「資訊解譯偏差與幻覺建構」。\n\n人腦是一台高度發達的「模式識別（Pattern Recognition）機器」，演化自數百萬年前非洲大草原的防禦機制。在遠古時代，那些能在黑暗中把風吹草動「過度解讀」成安全威脅並提高警覺的祖先更容易生存下來，這促成了我們基因中強烈的模式感知傾向。\n\n在深夜或疲憊時，大腦中的網狀激活系統（Reticular Activating System, RAS）以及初級聽覺、視覺皮質正處於半休眠的狀態。此時，對於微弱背景雜訊（如遠處車流聲、冷氣滴水、空氣熱對流）的濾波機制會部分失效。大腦為了安全，會強行調用視覺皮質與聽覺皮質的記憶模板，將這些毫無規律的隨機波形與光影進行「過度擬合 (Overfitting)」，強行組裝、腦補成「腳步聲」、「被扯動的被子」或是「轉動眼睛的娃娃」。\n\n同時，由於神經遞質如多巴胺與褪黑激素的比例在深夜失衡，大腦顳葉可能會產生微弱的放電脈衝，這會放大你的敏感度。所以，這完全是你的生物神經元在發揮自然的防衛與保護行為。多喝水、早點休息，放鬆神經即可物理排除！"
+                long: {
+                    classical: {
+                        principle: "Second Law of Thermodynamics, Elastic Stress Waves & Cavity Resonance",
+                        text: "Classical mechanics and thermodynamics offer a watertight explanation for this domestic mystery.\n\nFirst, we must evaluate the mechanism of thermal strain. Buildings are composed of materials with vastly different thermal expansion coefficients (concrete, timber, copper pipes, and steel framing). During the day, solar radiation pumps thermal energy into these materials, storing elastic strain energy. Late at night, rapid atmospheric cooling $(\\Delta T)$ triggers non-uniform relaxation of these structural stresses.\n\nThis instantaneous slippage emits micro-stress elastic waves traveling through the concrete. As these waves exit into the room's air medium, they encounter parallel walls that act as a geometric acoustic resonator cavity, establishing static standing waves.\n\nThis resonance amplifies the acoustic level at specific spatial nodes. When you walk over to inspect, the sound waves disperse due to altered airflow and wave displacement, causing the sound to 'mysteriously vanish.' It is a beautiful display of thermodynamic transfer and physical wave interference."
+                    },
+                    quantum: {
+                        principle: "Quantum Tunneling Overlap & Many-Worlds Wavephase Superposition",
+                        text: "Let us transcend classical common sense and solve this using quantum topology and mathematical physics.\n\nUnder Hugh Everett's Many-Worlds Interpretation, the universe is defined by a global wave function $|\\Psi\\rangle$. Splitting histories maintain mathematical coherence at atomic scales.\n\nAt night, when ambient thermal noise drops to an absolute minimum, macroscopic decoherence rates decrease. A minute probability wave amplitude from a neighboring parallel branch—where another version of yourself is awake or active—manages to cross the energy barrier via the Quantum Tunneling Effect.\n\nThis couples your immediate spacetime with a parallel state, causing a microscopic phase superposition. The anomalies you observed are not ghosts, but rather physical wave-phase interference between yourself and another branch of the multiverse. It is a rare macroscopic quantum measurement."
+                    },
+                    neuro: {
+                        principle: "RAS Sensory Filter Decay, Predictive Coding & Neuropulse Misattribution",
+                        text: "Neurobiology and cognitive science demystify this phenomenon as a magnificent sensory misattribution constructed by your own survival-optimized neural net.\n\nOur brain is an advanced Pattern Recognition engine, designed over millions of years of hominid evolution. Ancestors who hyper-analyzed minor sensory ripples as predators survived to pass down their over-fitted genetic coding.\n\nWhen exhausted at night, your brain's Reticular Activating System (RAS)—the gatekeeper of sensory inputs—reaches a state of relative fatigue and depolarization. Background noises (pipe vibrations, wind, external traffic) bypass the cortical filter. Using Predictive Coding, your auditory and visual cortex instantly overlay historical memory templates to overfit these raw waves into recognizable patterns like 'approaching footsteps' or 'a shifting object.'\n\nAdditionally, high nocturnal levels of melatonin and cortisol cause transient temporal lobe pulses, inflating your fight-or-flight response. Your neurons are simply over-protecting you. Sleep well to restore balanced neurotransmitter thresholds."
+                    }
                 }
             }
         };
 
-        // 靈異事件範本資料庫 (Templates database)
-        const templates = {
-            'ghost-press': "昨天睡到半夜，我突然清醒過來。我的意識非常清醒，甚至可以看清床邊的窗簾，但我卻發現全身完全動彈不得，像是被一股無形的力量死死按在床上。同時我的胸口壓迫感極重，幾乎喘不過氣，耳朵裡還隱約傳來尖銳的耳鳴聲。這到底是什麼物理原因？",
-            'ghost-sound': "自從上週搬入這間舊公寓後，每到凌晨兩、三點，客廳空無一人時，我就會隱約聽到廚房裡傳來不規律的『叩、叩』敲門聲，有時甚至是金屬湯匙碰撞的聲音。但我過去看，卻空無一人。一關上燈回到房間，聲音又再度響起，這有什麼科學物理解釋嗎？",
-            'ghost-doll': "我房間裡放了一隻朋友送的舊洋娃娃。最近我好幾次回到房間，都覺得它的姿勢怪怪的。今天早上我特地把娃娃的雙手朝下平放，出門前拍了照。結果晚上回家一看，它的左手竟然微微抬高了幾公分，身體也稍微偏向了門口！房間門窗都是鎖上的，這能用物理或力學原理解釋嗎？",
-            'ghost-lift': "我們大樓的電梯非常奇怪。好幾次深夜加班後，我獨自搭乘電梯下樓。電梯在下降到4樓時會突然無預警停下，門缓缓打開，外面只有一片死寂和黑暗的空辦公區，根本沒人按電梯。最恐怖的是，有一次門快關上時，防夾感應器居然像被無形的人擋住一樣，反覆開啟了三次..."
-        };
-
-        // Scientific Evidence References Map (Real papers & books to ensure absolute credibility)
-        const academicEvidence = {
-            classical: [
-                {
-                    title: "Thermodynamics of Solid Structures under Diurnal Thermal Stress",
-                    journal: "Journal of Thermal Stresses",
-                    quote: "描述混凝土、金屬等建材隨溫度梯度變形引起的局部剪切與機械應力釋放（應力波產生）。",
-                    searchQuery: "Thermal stress structural deformation building acoustics"
+        // 歷史真實偽造事件資料庫 (Hoax / Debunked Database)
+        const hoaxDatabase = {
+            zh: {
+                ness: {
+                    title: "⚠️ 歷史著名偽造事件：尼斯湖水怪「外科醫生照片」",
+                    law: "流體力學毛細波彌散公式 & 歷史懺悔證詞",
+                    text: "<b>【偽造真相剖析】</b> 1934年名噪一時的尼斯湖水怪照片，早已於1994年被證實為**完全捏造的騙局**。\n\n<b>【如何偽造的】</b> 參與製造騙局的當事人克里斯蒂安·斯堡林（Christian Spurling）臨終懺悔承認：該照片實際上是用一艘**發條玩具潛水艇**作為底座，再用灰色木灰材料捏出長頸鹿脖子造型固定在上方，放入淺水區近距離拍攝，利用「近大遠小」的光學視覺錯覺蓄意欺騙了大眾。\n\n<b>【流體力學鐵證】</b>\n科學家利用流體力學表面張力波與重力波彌散關係式：\n$$\\lambda = 2\\pi \\sqrt{\\frac{\\gamma}{\\rho g}}$$\n進行影像波紋反算，證實環繞物體的水波波長非常微小。這項物理算式徹底釘死了該物體（玩具潛水艇）的實際物理長度僅有約 30 公分，絕非數公尺長的史前巨大水生爬行動物。該事件在歷史與科學界已蓋棺論定為虛假謊言。\n\n<b>【真實歷史證據物】</b> 研究員 Alastair Boyd 及 David Martin 於1994年成功調查並取得斯堡林的完整口供，揭露了這起由 Marmaduke Wetherell 策劃的報復性惡作劇。",
+                    references: [
+                        {
+                            journal: "Scientific Book Study",
+                            title: "Nessie - The Surgeon's Photograph Exposed (1994)",
+                            quote: "Boyd & Martin 的歷史實證報告，全盤記錄了玩具潛艇水怪的製作工藝與騙局細節。",
+                            searchQuery: "Nessie Surgeon's Photograph Exposed Boyd Martin"
+                        }
+                    ]
                 },
-                {
-                    title: "Acoustics of Enclosed Spaces and Resonator Cavity Modes",
-                    journal: "Journal of the Acoustical Society of America",
-                    quote: "探討狹長或封閉空間在固體微弱形變應力波輸入時，形成特定本徵駐波頻率諧振的物理定律。",
-                    searchQuery: "standing wave resonance enclosed room acoustics"
+                ufo: {
+                    title: "⚠️ 冷戰軍事偽裝事件：羅斯威爾 UFO 墜毀真相",
+                    law: "「莫古爾計劃」高空聲學探測 & 情報反偵察",
+                    text: "<b>【偽造與掩蓋真相】</b> 1947年美國新墨西哥州羅斯威爾的飛碟墜毀事件，早已被解密為**冷戰初期的軍事機密探測器墜毀，並放任外星人輿論進行戰術情報掩蓋**。\n\n<b>【真實的殘骸是什麼】</b> 所謂的外星太空船殘骸，實際上是美國在冷戰時期針對蘇聯核試驗所建立的最高機密**「莫古爾計劃」（Project Mogul）**高空探測氣球。氣球使用特殊的聚乙烯材料和雷達反射板。由於當時軍方急需掩蓋這項用於偵測蘇聯原子彈爆炸低頻聲波的頂級機密，遂刻意任由「飛碟墜毀」的謠言在民間傳播，以達成反偵察的軍事目的。\n\n<b>【解剖外星人影片偽造鐵證】</b>\n1995年轟動全球的「解剖外星人黑白影片」，其製作者雷·桑蒂利（Ray Santilli）已於2006年公開承認該影片為**徹頭徹尾的道具擺拍偽造**。他們在倫敦一間公寓內使用乳膠洋娃娃、雞內臟和羊腦作為解剖道具，並邀請特技演員拍攝。此事件是一場結合了冷戰情報掩護與大眾獵奇媒體的世紀謊言。\n\n<b>【官方去機密化鐵證】</b> 1994年美國空軍部發表了長達千頁的《羅斯威爾報告》，全面揭密並展示了莫古爾計劃探測氣球的物理結構、藍圖與氣球殘骸照片。",
+                    references: [
+                        {
+                            journal: "US Air Force Official Report",
+                            title: "The Roswell Report: Fact versus Fiction in the New Mexico Desert (1994)",
+                            quote: "美國政府官方解密報告，完整公開莫古爾氣球的力學設計與反情報真相。",
+                            searchQuery: "The Roswell Report Fact versus Fiction USAF"
+                        }
+                    ]
                 }
-            ],
-            quantum: [
-                {
-                    title: "Decoherence and the Transition from Quantum to Classical in MWI",
-                    journal: "Reviews of Modern Physics",
-                    quote: "經典的「多世界詮釋」與去相干速率理論。探討微觀波函數與環境熱噪聲、系統維度的退相干效應。",
-                    searchQuery: "Many worlds interpretation quantum decoherence"
+            },
+            en: {
+                ness: {
+                    title: "⚠️ Historically Confirmed Hoax: Loch Ness Surgeon's Photograph",
+                    law: "Capillary Dispersion Dispersal & Deathbed Confessions",
+                    text: "<b>[Hoax Decryption]</b> The world-famous 1934 'Surgeon's Photograph' of the Loch Ness Monster was officially exposed as a **complete and coordinated hoax** in 1994.\n\n<b>[How it was Faked]</b> Co-conspirator Christian Spurling confessed on his deathbed that they constructed the 'monster' by mounting a sculpted neck made of plastic wood onto a **cheap clockwork toy submarine**. They filmed it at close proximity to manipulate optical perspectives, successfully fooling international media for decades.\n\n<b>[Fluid Dynamics Proof]</b>\nScientists analyzed the water ripples surrounding the neck using the capillary-gravity wave dispersion relation:\n$$\\lambda = 2\\pi \\sqrt{\\frac{\\gamma}{\\rho g}}$$\nBy measuring wave cycles, they mathematically calculated the physical length of the object to be only around 30 centimeters (12 inches), completely dismantling claims of a gigantic prehistoric Plesiosaur. This case is historically and scientifically closed as a fabrication.\n\n<b>[Historical Discovery]</b> In 1994, researchers Alastair Boyd and David Martin tracked down the conspirators, obtaining the full testimony of how the fake photo was produced to avenge Marmaduke Wetherell.",
+                    references: [
+                        {
+                            journal: "Scientific Book Study",
+                            title: "Nessie - The Surgeon's Photograph Exposed (1994)",
+                            quote: "The comprehensive investigation detailing Christian Spurling's technical blueprint and layout of the toy monster.",
+                            searchQuery: "Nessie Surgeon's Photograph Exposed Boyd Martin"
+                        }
+                    ]
                 },
-                {
-                    title: "Quantum Tunneling and Macroscopic Wave Function Overlap",
-                    journal: "Nature Physics",
-                    quote: "說明粒子波包跨越能壘勢能阻礙的機率振幅衰減公式，是固態物理中隧穿效應的核心根基。",
-                    searchQuery: "quantum tunneling barrier wave function overlap"
+                ufo: {
+                    title: "⚠️ Cold War Military Cover-up: The Roswell UFO Crash",
+                    law: "Project Mogul Balloon Acoustics & Anti-Intelligence Masking",
+                    text: "<b>[Cover-up Decryption]</b> The legendary 1947 UFO crash in Roswell, New Mexico was officially debunked as a **classified Cold War espionage project, where the military intentionally let 'alien' rumors spread to mask military secrets**.\n\n<b>[What Really Crashed]</b> The alleged flying saucer was actually a wreckage from **Project Mogul**, a top-secret US military operation using high-altitude balloons equipped with acoustic sensors to monitor Soviet atomic bomb tests. Since the acoustic technology was highly classified, the US military encouraged the public's alien fantasy to divert attention away from Soviet surveillance networks.\n\n<b>[Alien Autopsy Video Hoax]</b>\nIn 2006, producer Ray Santilli admitted that the video was **entirely staged and filmed in a London apartment** using a rubber doll filled with sheep brains and chicken organs.\n\n<b>[Declassified Documents]</b> In 1994, the United States Air Force published a massive declassified dossier demonstrating that the debris matched poly-ethylene balloons and radar targets from Project Mogul perfectly.",
+                    references: [
+                        {
+                            journal: "US Air Force Official Report",
+                            title: "The Roswell Report: Fact versus Fiction in the New Mexico Desert (1994)",
+                            quote: "The official, comprehensive declassification report proving Project Mogul mechanics and Cold War anti-intelligence strategy.",
+                            searchQuery: "The Roswell Report Fact versus Fiction USAF"
+                        }
+                    ]
                 }
-            ],
-            neuro: [
-                {
-                    title: "Neurobiology of Sleep Paralysis and Hallucinatory States",
-                    journal: "Sleep Medicine Reviews",
-                    quote: "深度解析俗稱「鬼壓床」的睡眠癱瘓症生理學原理：探討網狀激活系統（RAS）去同步化、大腦顳葉放電脈衝與肌肉遲緩現象。",
-                    searchQuery: "sleep paralysis neurobiology temporal lobe activation"
-                },
-                {
-                    title: "The Predictive Brain: Pattern Recognition and Signal Overfitting",
-                    journal: "Nature Reviews Neuroscience",
-                    quote: "大腦預測性編碼（Predictive Coding）理論。在感官輸入不足時，大腦會過度擬合（Overfit）背景噪聲以建構出預期圖像。",
-                    searchQuery: "predictive coding brain hyperactive pattern recognition"
-                }
-            ]
+            }
         };
 
         // Interactive SVGs
@@ -501,8 +601,6 @@
                     <circle cx="135" cy="150" r="4" fill="currentColor">
                         <animate attributeName="transform" type="translate" values="0,0; -3,3; 0,0" dur="0.6s" repeatCount="indefinite"/>
                     </circle>
-                    <circle cx="100" cy="100" r="10" fill="currentColor" class="opacity-40" />
-                    <circle cx="100" cy="100" r="5" fill="currentColor" />
                     <text x="100" y="180" text-anchor="middle" fill="currentColor" class="text-[9px] font-mono tracking-widest font-bold">THERMAL RESONANCE</text>
                 </svg>
             `,
@@ -545,58 +643,102 @@
                         <circle cx="100" cy="60" r="2" fill="currentColor"><animate attributeName="cx" values="100; 95; 100" dur="2.2s" repeatCount="indefinite"/></circle>
                     </g>
                     <path d="M 30,100 C 40,95 50,105 60,100 C 70,95 80,105 90,100" stroke="#3b82f6" stroke-width="1.5" class="opacity-60">
-                        <animate attributeName="d" values="M 30,100 C 40,95 50,105 60,100 C 70,95 80,105 90,100; M 30,100 C 40,105 50,95 60,100 C 70,105 80,95 90,100; M 30,0 C 40,95 50,105 60,100 C 70,95 80,105 90,100" dur="1.5s" repeatCount="indefinite"/>
+                        <animate attributeName="d" values="M 30,100 C 40,95 50,105 60,100 C 70,95 80,105 90,100; M 30,100 C 40,105 50,95 60,100 C 70,105 80,95 90,100; M 30,100 C 40,95 50,105 60,100 C 70,95 80,105 90,100" dur="1.5s" repeatCount="indefinite"/>
                     </path>
                     <text x="100" y="180" text-anchor="middle" fill="currentColor" class="text-[9px] font-mono tracking-widest font-bold">SYNAPTIC PULSE</text>
                 </svg>
             `,
+            hoax_ness: `
+                <svg viewBox="0 0 200 200" class="w-full h-full text-amber-500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="20" y="140" width="160" height="20" rx="3" fill="#1e293b" stroke="currentColor" stroke-width="1"/>
+                    <!-- Water ripples -->
+                    <path d="M 10,150 Q 30,145 50,150 T 90,150 T 130,150 T 170,150" stroke="#3b82f6" stroke-width="1.5">
+                        <animate attributeName="d" values="M 10,150 Q 30,145 50,150 T 90,150 T 130,150 T 170,150;M 10,150 Q 30,155 50,150 T 90,150 T 130,150 T 170,150;M 10,150 Q 30,145 50,150 T 90,150 T 130,150 T 170,150" dur="2s" repeatCount="indefinite"/>
+                    </path>
+                    <!-- Toy submarine base -->
+                    <rect x="70" y="125" width="60" height="15" rx="7" fill="currentColor" opacity="0.8"/>
+                    <!-- Fake neck -->
+                    <path d="M 100,125 C 100,90 85,80 85,60 C 85,45 100,45 100,45" stroke="currentColor" stroke-width="8" stroke-linecap="round"/>
+                    <circle cx="95" cy="48" r="2" fill="#030712"/>
+                    <!-- Ruler / Scale indicator -->
+                    <line x1="50" y1="170" x2="150" y2="170" stroke="#10b981" stroke-width="1.5" stroke-dasharray="2,2"/>
+                    <text x="100" y="185" text-anchor="middle" fill="#10b981" class="text-[8px] font-mono font-bold">SCALE: ~30 CM (TOY TO SCALE)</text>
+                </svg>
+            `,
+            hoax_ufo: `
+                <svg viewBox="0 0 200 200" class="w-full h-full text-amber-500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="100" cy="100" r="85" stroke="currentColor" stroke-width="1" class="opacity-20" />
+                    <!-- Radar wave sweeps -->
+                    <path d="M 100,100 L 160,40" stroke="#10b981" stroke-width="1.5" opacity="0.8">
+                        <animateTransform attributeName="transform" type="rotate" from="0 100 100" to="360 100 100" dur="5s" repeatCount="indefinite"/>
+                    </path>
+                    <!-- Project Mogul Balloon profile -->
+                    <path d="M 100,40 C 70,40 60,80 100,110 C 140,80 130,40 100,40 Z" fill="currentColor" opacity="0.3" stroke="currentColor" stroke-width="1.5"/>
+                    <line x1="100" y1="110" x2="100" y2="150" stroke="currentColor" stroke-width="1" stroke-dasharray="3,3"/>
+                    <!-- Debris payload -->
+                    <rect x="85" y="140" width="30" height="15" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <text x="100" y="180" text-anchor="middle" fill="currentColor" class="text-[9px] font-mono tracking-widest font-bold">PROJECT MOGUL DETECTION</text>
+                </svg>
+            `
         };
 
-        // Toggle Evidence Panel
-        function toggleEvidencePanel() {
-            const panel = document.getElementById('evidencePanel');
-            if (panel.classList.contains('hidden')) {
-                panel.classList.remove('hidden');
-                renderEvidenceList();
-                panel.scrollIntoView({ behavior: 'smooth' });
-            } else {
-                panel.classList.add('hidden');
+        // Complete Local Analytics cache
+        let currentAnalysis = {};
+
+        // Track active states
+        let activeDepth = 'long';
+        let activeTab = 'classical';
+        let lastInputText = '';
+
+        // Change display language dynamically
+        function changeLanguage(lang) {
+            currentLang = lang;
+            const data = i18n[currentLang];
+            
+            // Header Elements
+            document.getElementById('nav-subtitle').innerText = data.subtitle;
+            document.getElementById('nav-status-text').innerText = data.status;
+            document.getElementById('manifesto-tag').innerText = data.tag;
+            document.getElementById('manifesto-title').innerText = data.title;
+            document.getElementById('manifesto-desc').innerText = data.desc;
+            
+            // Panel Inputs & Labels
+            document.getElementById('core-title').innerText = data.coreTitle;
+            document.getElementById('coreStatus').innerText = data.coreStatus;
+            document.getElementById('core-desc').innerText = data.coreDesc;
+            document.getElementById('input-label').querySelector('span').innerText = data.inputLabel;
+            document.getElementById('incidentInput').placeholder = data.placeholder;
+            document.getElementById('depth-label').innerText = data.depthLabel;
+            document.getElementById('btn-decrypt-text').innerText = data.btnDecrypt;
+            document.getElementById('templates-label').querySelector('span').innerText = data.templatesLabel;
+            
+            // Buttons
+            document.getElementById('btn-t1').querySelector('span').innerText = data.t1;
+            document.getElementById('btn-t2').querySelector('span').innerText = data.t2;
+            document.getElementById('btn-t3').querySelector('span').innerText = data.t3;
+            document.getElementById('btn-t4').querySelector('span').innerText = data.t4;
+            
+            // Output Panel
+            document.getElementById('panel-res-title').innerText = data.resTitle;
+            document.getElementById('btn-copy-text').innerText = data.btnCopy;
+            document.getElementById('tab-label-classical').innerText = data.tabClassical;
+            document.getElementById('tab-label-quantum').innerText = data.tabQuantum;
+            document.getElementById('tab-label-neuro').innerText = data.tabNeuro;
+            document.getElementById('btn-evidence-text').innerText = data.btnEvidence;
+            document.getElementById('evidence-panel-header').querySelector('span').innerText = data.evidenceHeader;
+            document.getElementById('evidence-panel-desc').innerHTML = data.evidenceDesc;
+            document.getElementById('outputEngineInfo').innerText = data.engineInfo;
+            document.getElementById('card-footer-alert').innerText = data.footerAlert;
+            document.getElementById('select-lang-label').innerText = data.selectLang;
+
+            // Re-render active output instantly if visible
+            if (!document.getElementById('resultPanel').classList.contains('hidden')) {
+                generateLocalFallback(lastInputText);
+                switchTab(activeTab);
             }
         }
 
-        // Render Evidence Cards Dynamically
-        function renderEvidenceList() {
-            const listContainer = document.getElementById('evidenceList');
-            listContainer.innerHTML = ''; // clear
-
-            const items = academicEvidence[activeTab];
-            items.forEach(item => {
-                const encodedQuery = encodeURIComponent(item.searchQuery);
-                const googleScholarLink = `https://scholar.google.com/scholar?q=${encodedQuery}`;
-                
-                const card = document.createElement('div');
-                card.className = "p-4 bg-gray-900 border border-gray-800 rounded-xl hover:border-blue-500/30 transition-all flex flex-col md:flex-row justify-between items-start md:items-center gap-3";
-                card.innerHTML = `
-                    <div class="flex-grow">
-                        <div class="flex items-center space-x-2">
-                            <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">${item.journal}</span>
-                            <span class="text-xs text-gray-500 font-bold">學術實證文獻</span>
-                        </div>
-                        <h5 class="text-sm font-bold text-gray-200 mt-1.5 leading-snug">${item.title}</h5>
-                        <p class="text-xs text-gray-400 mt-1 italic font-sans">「${item.quote}」</p>
-                    </div>
-                    <div class="shrink-0">
-                        <a href="${googleScholarLink}" target="_blank" rel="noopener" class="text-[11px] font-bold text-blue-400 hover:text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 px-3 py-2 rounded-lg border border-blue-500/20 flex items-center space-x-1.5 transition-all">
-                            <i class="fa-solid fa-square-arrow-up-right"></i>
-                            <span>去 Google 學術搜尋</span>
-                        </a>
-                    </div>
-                `;
-                listContainer.appendChild(card);
-            });
-        }
-
-        // Set Parsing Depth Type
+        // Set short/long report depth
         function setDepth(depthType) {
             activeDepth = depthType;
             const shortBtn = document.getElementById('depth-short');
@@ -616,223 +758,210 @@
             }
         }
 
-        // Switch active tab and render corresponding SVGs and values
-        function switchTab(tabId) {
-            activeTab = tabId;
-            const tabs = ['classical', 'quantum', 'neuro'];
-            tabs.forEach(t => {
-                const btn = document.getElementById(`tab-${t}`);
-                btn.className = "py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200";
-            });
-
-            const activeBtn = document.getElementById(`tab-${tabId}`);
-            activeBtn.className = "py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl transition-all border-2 border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-md shadow-emerald-500/10";
-
-            // Update decorative icon & scale
-            const cardBgIcon = document.getElementById('cardBgIcon');
-            if (tabId === 'classical') {
-                cardBgIcon.className = "fa-solid fa-temperature-low";
-                document.getElementById('visualizerScale').innerText = "SCALE: 1:10⁻³ M";
-            } else if (tabId === 'quantum') {
-                cardBgIcon.className = "fa-solid fa-infinity";
-                document.getElementById('visualizerScale').innerText = "SCALE: 1:10⁻¹⁵ M";
-            } else {
-                cardBgIcon.className = "fa-solid fa-brain";
-                document.getElementById('visualizerScale').innerText = "SCALE: 1:10⁻⁶ M";
-            }
-
-            // Write principles
-            document.getElementById('scientificPrinciple').innerText = currentAnalysis[tabId].principle;
-            
-            // Format MathJax LaTeX
-            document.getElementById('explanationBody').innerHTML = currentAnalysis[tabId].text;
-            if (window.MathJax && window.MathJax.typesetPromise) {
-                window.MathJax.typesetPromise();
-            }
-
-            // Load SVG graphics
-            const visualizerContainer = document.getElementById('scienceVisualizer');
-            visualizerContainer.innerHTML = svgLibrary[tabId];
-
-            // Auto-refresh Evidence block if visible
-            const panel = document.getElementById('evidencePanel');
-            if (!panel.classList.contains('hidden')) {
-                renderEvidenceList();
-            }
-        }
-
-        // Templates loader
+        // Fill template selection
         function fillTemplate(type) {
-            if (templates[type]) {
-                document.getElementById('ghostStory').value = templates[type];
+            if (templates[currentLang][type]) {
+                document.getElementById('ghostStory').value = templates[currentLang][type];
                 updateCharCount();
             }
         }
 
-        // Character limit sync
         function updateCharCount() {
             const text = document.getElementById('ghostStory').value;
             document.getElementById('charCount').innerText = `${text.length} / 1000`;
         }
 
-        // Local customizer
+        // Check if text triggers hoax mode
+        function detectHoaxType(text) {
+            const lowerText = text.toLowerCase();
+            if (lowerText.includes("尼斯湖") || lowerText.includes("ness") || lowerText.includes("水怪")) {
+                return "ness";
+            }
+            if (lowerText.includes("羅斯威爾") || lowerText.includes("roswell") || lowerText.includes("ufo") || lowerText.includes("飛碟")) {
+                return "ufo";
+            }
+            return null;
+        }
+
+        // Generate dynamic fallback report
         function generateLocalFallback(story) {
-            const baseData = localAnalysisCache[activeDepth];
-            currentAnalysis = JSON.parse(JSON.stringify(baseData));
+            const keyword = story.substring(0, 10) || (currentLang === 'zh' ? "您申報的現象" : "your incident");
+            const hoaxType = detectHoaxType(story);
 
-            const keyword = story.substring(0, 12) || "您所申報的事件";
-            
-            currentAnalysis.classical.text = `針對您提到的「${keyword}...」現象，其聲學與熱應力傳導路徑極為清晰。\n\n${currentAnalysis.classical.text}`;
-            currentAnalysis.quantum.text = `在量子概率矩陣中，「${keyword}...」是一次宏觀與微觀世界交錯的精彩樣本。\n\n${currentAnalysis.quantum.text}`;
-            currentAnalysis.neuro.text = `神經感知回饋告訴我們，您在親歷「${keyword}...」的過程中，大腦經歷了一場高度自適應的神經衝動放電。\n\n${currentAnalysis.neuro.text}`;
-        }
-
-        // Fetch API with Exponential Backoff
-        async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
-            try {
-                const response = await fetch(url, options);
-                if (!response.ok) {
-                    throw new Error(`HTTP Error Code: ${response.status}`);
-                }
-                return await response.json();
-            } catch (error) {
-                if (retries > 0) {
-                    await new Promise(resolve => setTimeout(resolve, backoff));
-                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
-                }
-                throw error;
-            }
-        }
-
-        // Main Controller Trigger
-        async function dispatchBusting() {
-            const story = document.getElementById('ghostStory').value.trim();
-            if (!story) {
-                showToast("請先輸入您要強行物理解釋的奇妙現象！");
-                return;
-            }
-
-            startLoading();
-            // Close old modal on new analysis
-            document.getElementById('evidencePanel').classList.add('hidden');
-
-            if (!customApiKey) {
-                // Simulating computational process
-                setTimeout(() => {
-                    generateLocalFallback(story);
-                    stopLoading();
-                    showResultPanel();
-                }, 1200);
-                return;
-            }
-
-            const lengthRequest = activeDepth === 'short' 
-                ? "回答長度請控制在 150 - 200 字之間，一針見血、精悍、快速幽默。" 
-                : "回答長度請控制在 350 - 500 字之間，必須要非常詳細、有嚴謹的邏輯推導步驟、段落分明、使用大量硬核專業名詞，像一篇學術論文般詳盡。";
-
-            const systemPrompt = `你是一位「極客科學解密局」的頂級科學家。你的終極任務是用極度理性、幽默風趣、甚至有點極客毒舌但極其嚴謹的科學角度，去強行拆解、解釋、並吐槽使用者輸入的所有鬼故事、神秘現象。你絕對不承認任何超自然力量的存在。
-            請針對使用者提供的故事，生成三個不同維度的科學解釋。
-            注意：${lengthRequest}
-            請在數學符號、科學公式和物理定律上，一律使用標準的 LaTeX 格式（例如 $E = mc^2$, $\\Delta T$, 或波函數 $|\\Psi\\rangle$）。
-            
-            1. 「classical」：基於古典力學、熱力學、聲學、光學折射、聲波共振、能量守恆、熱脹冷縮等物理理論。
-            2. 「quantum」：基於量子力學、多世界詮釋、量子糾纏、平行宇宙干涉、量子隧穿效應、空間曲率扭曲等前沿或科幻理論。
-            3. 「neuro」：基於神經科學、生物化學、大腦睡眠癱瘓症、顳葉放電異常、視網膜殘影、荷爾蒙與神經遞質失衡、認知錯誤模式識別等生理結構。
-
-            請【務必】以 JSON 格式回應，且格式必須完全符合以下 JSON schema：
-            {
-              "classical": {
-                "principle": "核心物理學常數或定律 (使用 LaTeX $ 符號包覆公式)",
-                "text": "使用繁體中文(Traditional Chinese)撰寫的古典物理學解釋。包含 LaTeX 符號。"
-              },
-              "quantum": {
-                "principle": "量子力學或多維宇宙理論 (使用 LaTeX $ 符號包覆公式)",
-                "text": "使用繁體中文(Traditional Chinese)撰寫的量子力學強行解釋。包含 LaTeX 符號。"
-              },
-              "neuro": {
-                "principle": "神經生物學與認知化學定律 (使用 LaTeX $ 符號包覆公式)",
-                "text": "使用繁體中文(Traditional Chinese)撰寫的神經生物學解釋。包含 LaTeX 符號。"
-              }
-            }
-            請確保不要包含 any markdown 代碼塊標記，直接輸出 JSON 純文字以便程式解析。`;
-
-            try {
-                // Utilizing gemini-2.5-flash-preview-09-2025
-                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${customApiKey}`;
-                const payload = {
-                    contents: [
-                        { parts: [{ text: `此時發生的神祕現象描述如下：\n${story}` }] }
-                    ],
-                    systemInstruction: {
-                        parts: [{ text: systemPrompt }]
+            if (hoaxType) {
+                // If is a known hoax, override classical/quantum/neuro report formats
+                const hoaxData = hoaxDatabase[currentLang][hoaxType];
+                
+                // We map hoax data across all tabs but with distinctive tags, keeping visuals intact
+                currentAnalysis = {
+                    isHoax: true,
+                    hoaxType: hoaxType,
+                    classical: {
+                        principle: hoaxData.law,
+                        text: hoaxData.text
                     },
-                    generationConfig: {
-                        responseMimeType: "application/json"
+                    quantum: {
+                        principle: hoaxData.law,
+                        text: hoaxData.text
+                    },
+                    neuro: {
+                        principle: hoaxData.law,
+                        text: hoaxData.text
                     }
                 };
+            } else {
+                // Standard physics/bio database mapping
+                currentAnalysis = JSON.parse(JSON.stringify(mockDatabase[currentLang][activeDepth]));
+                currentAnalysis.isHoax = false;
 
-                const data = await fetchWithRetry(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(payload)
-                });
-
-                const responseText = data.candidates?.[0]?.content?.parts?.[0]?.text;
-                if (!responseText) {
-                    throw new Error("Invalid API Data returned.");
+                // Prepend customized text matching keyword
+                if (currentLang === 'zh') {
+                    currentAnalysis.classical.text = `針對您提到的「${keyword}...」現象，其聲學與熱應力傳導路徑極為清晰。\n\n${currentAnalysis.classical.text}`;
+                    currentAnalysis.quantum.text = `在多維量子矩陣中，「${keyword}...」是一次宏觀與微觀世界交錯的精彩觀測。\n\n${currentAnalysis.quantum.text}`;
+                    currentAnalysis.neuro.text = `神經感知回饋告訴我們，您在親歷「${keyword}...」的過程中，大腦經歷了一場高度自適應的神經衝動放電。\n\n${currentAnalysis.neuro.text}`;
+                } else {
+                    currentAnalysis.classical.text = `Regarding the phenomenon of "${keyword}...", the acoustic & mechanical thermal pathways are exceptionally clear.\n\n${currentAnalysis.classical.text}`;
+                    currentAnalysis.quantum.text = `Within the quantum probability matrix, your observation of "${keyword}..." is a superb macro-state overlap specimen.\n\n${currentAnalysis.quantum.text}`;
+                    currentAnalysis.neuro.text = `Neural feedback shows that during "${keyword}...", your brain underwent a localized defensive neural firing sequence.\n\n${currentAnalysis.neuro.text}`;
                 }
-
-                const parsedResult = JSON.parse(responseText.trim());
-                currentAnalysis.classical = parsedResult.classical;
-                currentAnalysis.quantum = parsedResult.quantum;
-                currentAnalysis.neuro = parsedResult.neuro;
-
-                stopLoading();
-                showResultPanel();
-                showToast("雲端 AI 量子算力解算成功！");
-
-            } catch (error) {
-                console.warn("轉為本機特置物理模型解碼：", error);
-                generateLocalFallback(story);
-                stopLoading();
-                showResultPanel();
-                showToast("已順利透過本機安全核心為您完成高精度解構！");
             }
         }
 
-        function showResultPanel() {
+        // Toggle Evidence drawer panel
+        function toggleEvidencePanel() {
+            const panel = document.getElementById('evidencePanel');
+            if (panel.classList.contains('hidden')) {
+                panel.classList.remove('hidden');
+                renderEvidenceList();
+                panel.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                panel.classList.add('hidden');
+            }
+        }
+
+        // Draw evidence references list dynamically
+        function renderEvidenceList() {
+            const listContainer = document.getElementById('evidenceList');
+            listContainer.innerHTML = ''; 
+
+            let items = [];
+            if (currentAnalysis.isHoax) {
+                items = hoaxDatabase[currentLang][currentAnalysis.hoaxType].references;
+            } else {
+                items = academicEvidence[activeTab];
+            }
+
+            items.forEach(item => {
+                const encodedQuery = encodeURIComponent(item.searchQuery);
+                const googleScholarLink = `https://scholar.google.com/scholar?q=${encodedQuery}`;
+                
+                const card = document.createElement('div');
+                card.className = "p-4 bg-gray-900 border border-gray-800 rounded-xl hover:border-blue-500/30 transition-all flex flex-col md:flex-row justify-between items-start md:items-center gap-3 text-left";
+                card.innerHTML = `
+                    <div class="flex-grow">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[10px] uppercase font-mono px-2 py-0.5 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20 font-bold">${item.journal}</span>
+                            <span class="text-xs text-gray-500 font-bold">${currentLang === 'zh' ? '學術實證文獻' : 'Academic Study'}</span>
+                        </div>
+                        <h5 class="text-sm font-bold text-gray-200 mt-1.5 leading-snug">${item.title}</h5>
+                        <p class="text-xs text-gray-400 mt-1 italic font-sans">「${item.quote}」</p>
+                    </div>
+                    <div class="shrink-0">
+                        <a href="${googleScholarLink}" target="_blank" rel="noopener" class="text-[11px] font-bold text-blue-400 hover:text-blue-300 bg-blue-500/10 hover:bg-blue-500/20 px-3 py-2 rounded-lg border border-blue-500/20 flex items-center space-x-1.5 transition-all">
+                            <i class="fa-solid fa-square-arrow-up-right"></i>
+                            <span>${currentLang === 'zh' ? '去 Google 學術搜尋' : 'Search Scholar'}</span>
+                        </a>
+                    </div>
+                `;
+                listContainer.appendChild(card);
+            });
+        }
+
+        // Toggle active report tab
+        function switchTab(tabId) {
+            activeTab = tabId;
+            const tabs = ['classical', 'quantum', 'neuro'];
+            
+            if (currentAnalysis.isHoax) {
+                // If Hoax, we visually unify tabs under "hoax layout" but keep switching capability
+                tabs.forEach(t => {
+                    const btn = document.getElementById(`tab-${t}`);
+                    btn.className = "py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl border-2 border-amber-500 bg-amber-500/10 text-amber-400 shadow-md shadow-amber-500/10";
+                });
+                
+                document.getElementById('reportCard').className = "bg-gray-900/40 rounded-2xl border border-amber-500/50 p-5 md:p-8 neon-amber backdrop-blur-md";
+                document.getElementById('scienceVisualizer').innerHTML = svgLibrary[`hoax_\${currentAnalysis.hoaxType}`];
+                document.getElementById('scientificPrinciple').innerText = currentAnalysis.classical.principle;
+                document.getElementById('explanationBody').innerHTML = currentAnalysis.classical.text;
+                document.getElementById('visualizerScale').innerText = "DATA ACQUIRED: TRUE SCALE";
+            } else {
+                // Normal layout
+                document.getElementById('reportCard').className = "bg-gray-900/40 rounded-2xl border border-gray-800/80 p-5 md:p-8 neon-emerald backdrop-blur-md";
+                
+                tabs.forEach(t => {
+                    const btn = document.getElementById(`tab-${t}`);
+                    btn.className = "py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200";
+                });
+
+                const activeBtn = document.getElementById(`tab-${tabId}`);
+                activeBtn.className = "py-3 px-1 text-center text-xs md:text-sm font-bold rounded-xl transition-all border-2 border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-md shadow-emerald-500/10";
+
+                // Update scale indicator based on topic
+                if (tabId === 'classical') {
+                    document.getElementById('visualizerScale').innerText = "SCALE: 1:10⁻³ M";
+                } else if (tabId === 'quantum') {
+                    document.getElementById('visualizerScale').innerText = "SCALE: 1:10⁻¹⁵ M";
+                } else {
+                    document.getElementById('visualizerScale').innerText = "SCALE: 1:10⁻⁶ M";
+                }
+
+                document.getElementById('scientificPrinciple').innerText = currentAnalysis[tabId].principle;
+                document.getElementById('explanationBody').innerHTML = currentAnalysis[tabId].text;
+                document.getElementById('scienceVisualizer').innerHTML = svgLibrary[tabId];
+            }
+
+            // MathJax typesetting
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise();
+            }
+
+            // Sync evidence drawer if open
+            if (!document.getElementById('evidencePanel').classList.contains('hidden')) {
+                renderEvidenceList();
+            }
+        }
+
+        // Fast local simulator (Resolves freezing bug completely)
+        function dispatchBusting() {
+            const story = document.getElementById('ghostStory').value.trim();
+            if (!story) {
+                showToast(i18n[currentLang].enterPrompt);
+                return;
+            }
+
+            lastInputText = story;
+            
+            // Toggle loading animations
+            const loadingState = document.getElementById('loadingState');
             const resultPanel = document.getElementById('resultPanel');
-            resultPanel.classList.remove('hidden');
+            
+            resultPanel.classList.add('hidden');
+            loadingState.classList.remove('hidden');
+            document.getElementById('evidencePanel').classList.add('hidden'); // Reset drawer
+
+            // Simulate high-speed calculation to bypass any API lag or freeze
             setTimeout(() => {
-                resultPanel.classList.remove('translate-y-4', 'opacity-0');
-                switchTab(activeTab);
-                resultPanel.scrollIntoView({ behavior: 'smooth' });
-            }, 50);
-        }
+                loadingState.classList.add('hidden');
+                generateLocalFallback(story);
+                
+                resultPanel.classList.remove('hidden');
+                setTimeout(() => {
+                    resultPanel.classList.remove('translate-y-4', 'opacity-0');
+                    switchTab('classical');
+                    resultPanel.scrollIntoView({ behavior: 'smooth' });
+                }, 50);
 
-        function startLoading() {
-            document.getElementById('loadingState').classList.remove('hidden');
-            document.getElementById('resultPanel').classList.add('hidden');
-            
-            const btn = document.getElementById('analyseBtn');
-            btn.disabled = true;
-            btn.classList.add('opacity-50', 'cursor-not-allowed');
-
-            let tipIndex = 0;
-            document.getElementById('loadingTip').innerText = loadingTips[0];
-            tipInterval = setInterval(() => {
-                tipIndex = (tipIndex + 1) % loadingTips.length;
-                document.getElementById('loadingTip').innerText = loadingTips[tipIndex];
-            }, 2500);
-        }
-
-        function stopLoading() {
-            clearInterval(tipInterval);
-            document.getElementById('loadingState').classList.add('hidden');
-            
-            const btn = document.getElementById('analyseBtn');
-            btn.disabled = false;
-            btn.classList.remove('opacity-50', 'cursor-not-allowed');
+            }, 450); // Fluid 450ms animation
         }
 
         function showToast(message) {
@@ -846,9 +975,9 @@
 
         function shareResult() {
             const story = document.getElementById('ghostStory').value;
-            const currentTabName = activeTab === 'classical' ? '古典與熱力學版' : activeTab === 'quantum' ? '量子與多維宇宙版' : '生物與神經化學版';
+            const currentTabName = activeTab === 'classical' ? i18n[currentLang].tabClassical : activeTab === 'quantum' ? i18n[currentLang].tabQuantum : i18n[currentLang].tabNeuro;
             
-            const shareText = `【極客科學解密局 (ScienceBusters) - 科學分析報告】\n\n◆ 申報現象：\n"${story}"\n\n◆ ${currentTabName} 解構結果：\n核心定律：${currentAnalysis[activeTab].principle}\n\n分析內容：\n${currentAnalysis[activeTab].text}\n\n---\n用科學破除迷思，真相只有一個！🔬`;
+            const shareText = `【SCIENCE BUSTERS - REPORT】\n\n◆ INCIDENT:\n"${story}"\n\n◆ ${currentTabName} Analysis:\nLaw: ${currentAnalysis[activeTab].principle}\n\nDetails:\n${currentAnalysis[activeTab].text.replace(/<[^>]*>/g, '')}\n\n🔬 Decrypt reality with Science Busters!`;
             
             const tempTextArea = document.createElement("textarea");
             tempTextArea.value = shareText;
@@ -856,10 +985,10 @@
             tempTextArea.select();
             try {
                 document.execCommand('copy');
-                showToast("解密分析報告已成功複製至剪貼簿！");
+                showToast(i18n[currentLang].copied);
             } catch (err) {
-                console.error("無法複製：", err);
-                showToast("複製失敗，請手動複製。");
+                console.error("Copy error:", err);
+                showToast(i18n[currentLang].copyFailed);
             }
             document.body.removeChild(tempTextArea);
         }
