@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>理智超渡局 - 用宇宙至理強行物理超渡</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Noto+Sans+TC:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #030712;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(30, 41, 59, 0.5) 0, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(17, 24, 39, 0.7) 0, transparent 50%);
+        }
+
+        .tech-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        /* 霓虹發光與微秒動畫 */
+        .neon-blue {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.25);
+            border: 1px solid rgba(59, 130, 246, 0.4);
+        }
+
+        .neon-emerald {
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.2);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .cyber-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+        }
+
+        @keyframes pulse-slow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.05); }
+        }
+
+        .glow-sphere {
+            animation: pulse-slow 8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="text-gray-100 min-h-screen flex flex-col justify-between cyber-grid relative overflow-x-hidden">
+
+    <!-- 背景裝飾發光球 -->
+    <div class="absolute top-20 left-10 w-96 h-96 rounded-full bg-blue-900/10 blur-[120px] glow-sphere pointer-events-none"></div>
+    <div class="absolute bottom-20 right-10 w-96 h-96 rounded-full bg-emerald-900/10 blur-[120px] glow-sphere pointer-events-none" style="animation-delay: -4s;"></div>
+
+    <!-- 頂部導覽列 -->
+    <header class="border-b border-gray-800/80 bg-gray-950/80 backdrop-blur-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-blue-600/15 text-blue-400 p-2.5 rounded-xl border border-blue-500/30">
+                    <i class="fa-solid fa-atom text-2xl animate-spin" style="animation-duration: 6s;"></i>
+                </div>
+                <div>
+                    <h1 class="text-xl md:text-2xl font-black tracking-wider tech-font text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-cyan-400 to-emerald-400">
+                        PHYSICS BUSTERS
+                    </h1>
+                    <p class="text-xs text-gray-400 font-medium tracking-widest uppercase">理智超渡局 ‧ 科學除魔總署</p>
+                </div>
+            </div>
+            <div>
+                <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 shadow-sm">
+                    <span class="w-2 h-2 mr-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                    Gemini 量子算力已對齊
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主要內容區 -->
+    <main class="flex-grow max-w-4xl w-full mx-auto px-4 py-8 md:py-12 z-10">
+        
+        <!-- 核心精神宣言 -->
+        <div class="text-center mb-10 md:mb-14">
+            <span class="text-xs font-bold tracking-widest text-blue-500 uppercase bg-blue-500/10 px-3 py-1.5 rounded-full border border-blue-500/20">
+                SYSTEM ACTIVE // 萬物皆可物理解釋
+            </span>
+            <h2 class="text-3xl md:text-5xl font-black mt-4 mb-4 tracking-tight leading-tight text-white">
+                「世上沒有鬼，<br class="md:hidden">只有未被測量的物理量。」
+            </h2>
+            <p class="text-gray-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+                不論是深夜的詭異腳步、無法動彈的鬼壓床、還是眼珠會動的舊洋娃娃... 在理智超渡局的熱力學與多維量子演算法前，所有靈異事件都將被強制還原為無害的物理常數。
+            </p>
+        </div>
+
+        <!-- 輸入控制面板 -->
+        <div class="bg-gray-900/60 rounded-2xl p-6 md:p-8 mb-8 border border-gray-800/80 neon-blue backdrop-blur-md">
+            <div class="mb-5">
+                <div class="flex justify-between items-center mb-2.5">
+                    <label for="ghostStory" class="text-sm font-bold text-blue-400 flex items-center">
+                        <i class="fa-solid fa-ghost mr-2 text-red-400 animate-bounce"></i>
+                        <span>請描述您遭遇的靈異鬼故事、神秘事件</span>
+                    </label>
+                    <span id="charCount" class="text-xs text-gray-500 tech-font">0 / 1000</span>
+                </div>
+                <textarea 
+                    id="ghostStory" 
+                    maxlength="1000"
+                    placeholder="範例：昨晚一個人睡覺時，感覺床尾有人在拉我的被子，而且房間溫度突然變得很冰冷，甚至聽到一聲嘆氣..." 
+                    class="w-full h-44 bg-gray-950/90 border border-gray-800 rounded-xl p-4 text-gray-200 placeholder-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:border-blue-500 transition-all text-base leading-relaxed resize-none"
+                    oninput="updateCharCount()"
+                ></textarea>
+            </div>
+
+            <!-- 常見靈異快速範本 -->
+            <div class="mb-8">
+                <span class="text-xs font-bold text-gray-500 block mb-3">
+                    <i class="fa-solid fa-wand-magic-sparkles mr-1.5 text-blue-400"></i>快速載入經典靈異測試樣本：
+                </span>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-2">
+                    <button onclick="fillTemplate('ghost-press')" class="text-xs bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-3 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                        <span>💤 俗稱鬼壓床</span>
+                        <i class="fa-solid fa-chevron-right text-[10px] text-gray-600"></i>
+                    </button>
+                    <button onclick="fillTemplate('ghost-sound')" class="text-xs bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-3 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                        <span>🚪 深夜怪異敲門聲</span>
+                        <i class="fa-solid fa-chevron-right text-[10px] text-gray-600"></i>
+                    </button>
+                    <button onclick="fillTemplate('ghost-doll')" class="text-xs bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-3 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                        <span>🧸 會自動移位的娃娃</span>
+                        <i class="fa-solid fa-chevron-right text-[10px] text-gray-600"></i>
+                    </button>
+                    <button onclick="fillTemplate('ghost-lift')" class="text-xs bg-gray-950 hover:bg-gray-800/60 text-gray-300 py-2.5 px-3 rounded-lg border border-gray-800 hover:border-blue-500/50 transition-all text-left flex items-center justify-between">
+                        <span>🛗 自動停靠黑暗樓層</span>
+                        <i class="fa-solid fa-chevron-right text-[10px] text-gray-600"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 分析按鈕 -->
+            <button 
+                id="analyseBtn"
+                onclick="dispatchBusting()" 
+                class="w-full bg-gradient-to-r from-blue-600 via-indigo-600 to-emerald-600 hover:from-blue-500 hover:via-indigo-500 hover:to-emerald-500 text-white font-bold py-4.5 px-6 rounded-xl shadow-lg transition-all flex items-center justify-center space-x-3 text-lg hover:scale-[1.01] active:scale-[0.99] group"
+            >
+                <i class="fa-solid fa-shield-halved group-hover:rotate-12 transition-transform"></i>
+                <span>開啟科學天眼，強行超渡</span>
+            </button>
+        </div>
+
+        <!-- 運算中狀態 -->
+        <div id="loadingState" class="hidden my-12 text-center py-10 bg-gray-900/30 rounded-2xl border border-gray-800/50 backdrop-blur-sm">
+            <div class="inline-block relative w-24 h-24 mb-5">
+                <!-- 三軌道旋轉載入動畫 -->
+                <div class="absolute inset-0 rounded-full border-2 border-t-blue-500 border-r-transparent border-b-transparent border-l-transparent animate-spin" style="animation-duration: 0.8s;"></div>
+                <div class="absolute inset-2 rounded-full border border-t-transparent border-r-emerald-500 border-b-transparent border-l-transparent animate-spin" style="animation-duration: 1.2s; animation-direction: reverse;"></div>
+                <div class="absolute inset-4 rounded-full border-2 border-t-transparent border-r-transparent border-b-purple-500 border-l-transparent animate-spin" style="animation-duration: 1.6s;"></div>
+                <div class="absolute inset-6 bg-gray-950 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-satellite-dish text-blue-400 text-xl animate-pulse"></i>
+                </div>
+            </div>
+            <h3 class="text-xl font-bold text-gray-200 tech-font tracking-widest uppercase">DECONSTRUCTING PARANORMAL SIGNAL</h3>
+            <p id="loadingTip" class="text-sm text-emerald-400 mt-3 font-mono">正在調用拉普拉斯妖模擬器解算微觀粒子動量...</p>
+        </div>
+
+        <!-- 自訂錯誤訊息提示框 (代替 Alert) -->
+        <div id="errorBanner" class="hidden my-6 p-4 bg-red-950/40 border border-red-500/30 rounded-xl text-red-200 text-sm flex items-start space-x-3">
+            <i class="fa-solid fa-triangle-exclamation text-lg text-red-400 mt-0.5"></i>
+            <div>
+                <h4 class="font-bold">運算連線異常</h4>
+                <p id="errorText" class="mt-0.5 text-red-300/90"></p>
+            </div>
+        </div>
+
+        <!-- 科學解構報告輸出區 -->
+        <div id="resultPanel" class="hidden transition-all duration-700 ease-in-out transform translate-y-4">
+            <div class="border-t border-gray-800/80 my-10"></div>
+            
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-6 gap-3">
+                <div class="flex items-center space-x-3">
+                    <span class="w-3 h-3 rounded-full bg-emerald-500 animate-pulse"></span>
+                    <h3 class="text-2xl font-black tracking-tight text-white">理智超渡局 ‧ 多維度科學報告</h3>
+                </div>
+                <button onclick="shareResult()" class="self-start md:self-auto text-xs text-gray-300 hover:text-white bg-gray-800/80 hover:bg-gray-700 px-4 py-2 rounded-xl border border-gray-700/60 flex items-center space-x-2 transition-all">
+                    <i class="fa-solid fa-copy"></i>
+                    <span>複製本篇超渡報告</span>
+                </button>
+            </div>
+
+            <!-- 三種版本頁籤切換器 -->
+            <div class="grid grid-cols-3 gap-2.5 mb-6">
+                <button id="tab-classical" onclick="switchTab('classical')" class="py-4 px-2 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200">
+                    <i class="fa-solid fa-temperature-low mr-1.5 block md:inline mb-1 md:mb-0 text-amber-500"></i>熱力與古典物理
+                </button>
+                <button id="tab-quantum" onclick="switchTab('quantum')" class="py-4 px-2 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200">
+                    <i class="fa-solid fa-infinity mr-1.5 block md:inline mb-1 md:mb-0 text-cyan-400"></i>量子與多維宇宙
+                </button>
+                <button id="tab-neuro" onclick="switchTab('neuro')" class="py-4 px-2 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200">
+                    <i class="fa-solid fa-brain mr-1.5 block md:inline mb-1 md:mb-0 text-purple-400"></i>生物與神經化學
+                </button>
+            </div>
+
+            <!-- 報告呈現卡片 -->
+            <div class="bg-gray-900/40 rounded-2xl border border-gray-800/80 p-6 md:p-8 neon-emerald relative overflow-hidden backdrop-blur-md">
+                
+                <!-- 科技感背景裝飾線條 -->
+                <div class="absolute top-0 right-0 p-6 opacity-[0.03] text-[180px] pointer-events-none text-emerald-400">
+                    <i id="cardBgIcon" class="fa-solid fa-atom"></i>
+                </div>
+
+                <!-- 報告核心內容 -->
+                <div class="prose prose-invert max-w-none">
+                    
+                    <!-- 科學公式與論點區 -->
+                    <div class="bg-gray-950/90 p-4.5 rounded-xl border border-gray-800/80 mb-6 flex items-start space-x-3.5">
+                        <div class="text-emerald-400 text-2xl mt-1.5">
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+                        <div>
+                            <div class="text-xs text-gray-500 uppercase tracking-widest tech-font font-bold">Scientific Core Law / 核心科學定律</div>
+                            <div id="scientificPrinciple" class="text-base font-bold text-emerald-400 mt-1">載入中...</div>
+                        </div>
+                    </div>
+
+                    <!-- 主體解釋內容 -->
+                    <div id="explanationBody" class="text-gray-300 leading-relaxed text-base space-y-4 whitespace-pre-wrap font-normal">
+                        正在載入強行解釋的內容...
+                    </div>
+                </div>
+
+                <!-- 底部免責宣告 -->
+                <div class="mt-8 pt-5 border-t border-gray-800/60 flex flex-col md:flex-row justify-between items-start md:items-center text-xs text-gray-500 gap-3">
+                    <div class="flex items-center space-x-2">
+                        <i class="fa-solid fa-shield-halved text-emerald-500/60"></i>
+                        <span>超渡分析模組：Gemini-2.5-Flash 極速量子特裝版</span>
+                    </div>
+                    <div>
+                        <span>*本報告基於已知常數，幽靈退散，請放心保持唯物主義。</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- 底部 -->
+    <footer class="border-t border-gray-900/80 bg-gray-950/60 py-8 text-xs text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+            <div>
+                <p class="font-semibold text-gray-400">© 2026 理智超渡局 (PhysicsBusters). 保留所有科學權利。</p>
+                <p class="mt-1 text-gray-600">本網站完全運行於客戶端沙盒，透過 Google Gemini 2.5 進行動態科學解構。</p>
+            </div>
+            <div class="flex space-x-4">
+                <span class="hover:text-gray-300 transition-colors">E = mc²</span>
+                <span>•</span>
+                <span class="hover:text-gray-300 transition-colors">S = k ln Ω</span>
+                <span>•</span>
+                <span class="hover:text-gray-300 transition-colors">iℏ ∂/∂t |Ψ⟩ = Ĥ |Ψ⟩</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 輕提示 (Toast) -->
+    <div id="toast" class="fixed bottom-6 right-6 bg-gray-900/95 border border-emerald-500/30 text-emerald-400 px-5 py-3.5 rounded-xl shadow-2xl flex items-center space-x-3 transform translate-y-24 opacity-0 transition-all duration-300 z-50 backdrop-blur-md">
+        <i class="fa-solid fa-circle-check text-lg"></i>
+        <span id="toastMsg" class="font-medium">已成功處理</span>
+    </div>
+
+    <!-- 核心 JavaScript 邏輯 -->
+    <script>
+        // API 密鑰由 Preview 運行環境在後端自動代入
+        const apiKey = "";
+        
+        // 解析結果緩存
+        let analysisCache = {
+            classical: {
+                principle: "熱力學第二定律 & 機械縱波之動能吸收傳導",
+                text: ""
+            },
+            quantum: {
+                principle: "量子隧穿效應與多世界疊加態不相干崩塌",
+                text: ""
+            },
+            neuro: {
+                principle: "網狀激活系統 (RAS) 錯誤信號模式識別過濾器失效",
+                text: ""
+            }
+        };
+
+        let activeTab = 'classical';
+
+        // 初始化
+        window.onload = function() {
+            fillTemplate('ghost-press');
+        };
+
+        // 更新字數
+        function updateCharCount() {
+            const text = document.getElementById('ghostStory').value;
+            document.getElementById('charCount').innerText = `${text.length} / 1000`;
+        }
+
+        // 靈異事件範本資料庫
+        const templates = {
+            'ghost-press': "昨天睡到半夜，我突然清醒過來。我的意識非常清醒，甚至可以看清床邊的窗簾，但我卻發現全身完全動彈不得，像是被一股無形的力量死死按在床上。同時我的胸口壓迫感極重，幾乎喘不過氣，耳朵裡還隱約傳來尖銳的耳鳴聲。這是不是人家說的被『髒東西』壓床？",
+            'ghost-sound': "自從上週搬入這間舊公寓後，每到凌晨兩、三點，客廳空無一人時，我就會隱約聽到廚房裡傳來不規律的『叩、叩』敲門聲，有時甚至是金屬湯匙碰撞的聲音。但我過去看，卻空無一人。一關上燈回到房間，聲音又再度響起，這實在太令人毛骨悚然了！",
+            'ghost-doll': "我房間裡放了一隻朋友送的舊洋娃娃。最近我好幾次回到房間，都覺得它的姿勢怪怪的。今天早上我特地把娃娃的雙手朝下平放，出門前拍了照。結果晚上回家一看，它的左手竟然微微抬高了幾公分，身體也稍微偏向了門口！房間門窗都是鎖上的，這太不對勁了...",
+            'ghost-lift': "我們大樓的電梯非常邪門。好幾次深夜加班後，我獨自搭乘電梯下樓。電梯在下降到4樓時會突然無預警停下，門缓缓打開，外面只有一片死寂和黑暗的空辦公區，根本沒人按電梯。最恐怖的是，有一次門快關上時，防夾感應器居然像被無形的人擋住一樣，反覆開啟了三次..."
+        };
+
+        // 填入範本
+        function fillTemplate(type) {
+            if (templates[type]) {
+                document.getElementById('ghostStory').value = templates[type];
+                updateCharCount();
+            }
+        }
+
+        // 頁籤切換
+        function switchTab(tabId) {
+            activeTab = tabId;
+            
+            // 重置樣式
+            const tabs = ['classical', 'quantum', 'neuro'];
+            tabs.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                btn.className = "py-4 px-2 text-center text-xs md:text-sm font-bold rounded-xl transition-all border border-gray-800/80 bg-gray-900/40 text-gray-400 hover:bg-gray-800/40 hover:text-gray-200";
+            });
+
+            // 啟動當前樣式
+            const activeBtn = document.getElementById(`tab-${tabId}`);
+            activeBtn.className = "py-4 px-2 text-center text-xs md:text-sm font-bold rounded-xl transition-all border-2 border-emerald-500 bg-emerald-500/10 text-emerald-400 shadow-md shadow-emerald-500/10";
+
+            // 變更圖示與資料
+            const cardBgIcon = document.getElementById('cardBgIcon');
+            if (tabId === 'classical') {
+                cardBgIcon.className = "fa-solid fa-temperature-low";
+            } else if (tabId === 'quantum') {
+                cardBgIcon.className = "fa-solid fa-infinity";
+            } else {
+                cardBgIcon.className = "fa-solid fa-brain";
+            }
+
+            document.getElementById('scientificPrinciple').innerText = analysisCache[tabId].principle;
+            document.getElementById('explanationBody').innerText = analysisCache[tabId].text;
+        }
+
+        // 旋轉載入提示詞
+        const loadingTips = [
+            "正在調用拉普拉斯妖模擬器解算微觀粒子動量...",
+            "正在嘗試連接平行宇宙，觀測相干態波函數...",
+            "正在掃描大腦顳葉電位、多巴胺及褪黑激素分泌...",
+            "正在排除重力異常與溫差導致的介質膨脹波...",
+            "正在計算空氣中灰塵顆粒在微光下的瑞利散射折射率...",
+            "大腦皮質認知模式過度擬合（Overfitting）過濾中..."
+        ];
+        let tipInterval;
+
+        function startLoading() {
+            document.getElementById('errorBanner').classList.add('hidden');
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('resultPanel').classList.add('hidden');
+            
+            const btn = document.getElementById('analyseBtn');
+            btn.disabled = true;
+            btn.classList.add('opacity-50', 'cursor-not-allowed');
+
+            let tipIndex = 0;
+            document.getElementById('loadingTip').innerText = loadingTips[0];
+            tipInterval = setInterval(() => {
+                tipIndex = (tipIndex + 1) % loadingTips.length;
+                document.getElementById('loadingTip').innerText = loadingTips[tipIndex];
+            }, 2500);
+        }
+
+        function stopLoading() {
+            clearInterval(tipInterval);
+            document.getElementById('loadingState').classList.add('hidden');
+            
+            const btn = document.getElementById('analyseBtn');
+            btn.disabled = false;
+            btn.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMsg').innerText = message;
+            toast.className = toast.className.replace('translate-y-24 opacity-0', 'translate-y-0 opacity-100');
+            setTimeout(() => {
+                toast.className = toast.className.replace('translate-y-0 opacity-100', 'translate-y-24 opacity-0');
+            }, 3000);
+        }
+
+        function showError(message) {
+            const banner = document.getElementById('errorBanner');
+            document.getElementById('errorText').innerText = message;
+            banner.classList.remove('hidden');
+            banner.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // 複製超渡報告 (考慮 iframe 限制，使用 textarea 輔助)
+        function shareResult() {
+            const story = document.getElementById('ghostStory').value;
+            const currentTabName = activeTab === 'classical' ? '古典與熱力學版' : activeTab === 'quantum' ? '量子與多維宇宙版' : '生物與神經化學版';
+            
+            const shareText = `【理智超渡局 (PhysicsBusters) - 科學強行超渡報告】\n\n◆ 申報現象：\n"${story}"\n\n◆ ${currentTabName} 解構結果：\n核心定律：${analysisCache[activeTab].principle}\n\n分析內容：\n${analysisCache[activeTab].text}\n\n---\n世上沒有鬼，只有未被說明的物理量！👻`;
+            
+            const tempTextArea = document.createElement("textarea");
+            tempTextArea.value = shareText;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            try {
+                document.execCommand('copy');
+                showToast("超渡分析報告已成功複製至剪貼簿！");
+            } catch (err) {
+                console.error("無法複製：", err);
+                showToast("複製失敗，請手動圈選內容複製。");
+            }
+            document.body.removeChild(tempTextArea);
+        }
+
+        // 指數退避重試
+        async function fetchWithRetry(url, options, retries = 5, backoff = 1000) {
+            try {
+                const response = await fetch(url, options);
+                if (!response.ok) {
+                    throw new Error(`伺服器回應錯誤 (狀態碼: ${response.status})`);
+                }
+                return await response.json();
+            } catch (error) {
+                if (retries > 0) {
+                    await new Promise(resolve => setTimeout(resolve, backoff));
+                    return fetchWithRetry(url, options, retries - 1, backoff * 2);
+                }
+                throw error;
+            }
+        }
+
+        // 核心超渡：請求 Gemini API
+        async function dispatchBusting() {
+            const story = document.getElementById('ghostStory').value.trim();
+            if (!story) {
+                showToast("請先輸入您要強行物理解釋的靈異事件！");
+                return;
+            }
+
+            startLoading();
+
+            // 理智超渡局系統提示詞
+            const systemPrompt = `你是一位「理智超渡局」的頂級科學家。你的終極任務是用極度理性、幽默不解風情、甚至有點毒舌但極其嚴謹的科學角度，去強行拆解、解釋、並吐槽使用者輸入的所有鬼故事、都市傳說或靈異現象。你絕對不承認任何超自然力量的存在。
+            請針對使用者提供的手機或短文故事，生成三個不同維度的科學解釋：
+            
+            1. 「classical」：基於古典力學、熱力學、聲學、光學折射、聲波共振、能量守恆、熱脹冷縮等物理理論。
+            2. 「quantum」：基於量子力學、多世界詮釋、量子糾纏、平行宇宙干涉、量子隧穿效應、空間曲率扭曲等前沿或科幻理論（可用略帶強詞奪理、強行高大上的量子物理來搞笑解釋）。
+            3. 「neuro」：基於神經科學、生物化學、大腦睡眠癱瘓症、顳葉放電異常、視網膜殘影、荷爾蒙與神經遞質失衡、認知錯誤模式識別等生理結構。
+
+            請【務必】以 JSON 格式回應，且格式必須完全符合以下 JSON schema（不要有任何 Markdown 包裹標籤，僅輸出 JSON 字串本身）：
+            {
+              "classical": {
+                "principle": "核心物理學常數或定律 (例如: 熱力學第二定律與機械縱波駐波共振)",
+                "text": "使用繁體中文(Traditional Chinese)撰寫的古典物理學解釋。內容要詳細（約200-350字），態度必須理性而幽默，強行用分子運動、能量轉移、物理反射等概念來解釋使用者發生的靈異事件，證明那完全是正常的物理現象。"
+              },
+              "quantum": {
+                "principle": "量子力學或多維宇宙理論 (例如: 空間拓撲漏洞與宏觀波函數塌縮干涉)",
+                "text": "使用繁體中文(Traditional Chinese)撰寫的量子力學強行解釋。內容要詳細（約200-350字），可以扯到平行宇宙的另一個他在活動、量子相干性干涉、重力微擾等宏觀量子現象，一本正經地胡說八道，但使用極度專業的量子術語。"
+              },
+              "neuro": {
+                "principle": "神經生物學與認知化學定律 (例如: 網狀激活系統過度激活與多巴胺短路)",
+                "text": "使用繁體中文(Traditional Chinese)撰寫的神經生物學解釋。內容要詳細（約200-350字），剖析大腦此時的神經遞質如褪黑激素、多巴胺分泌狀況、或是顳葉訊號傳導延遲、大腦皮層在半睡半醒時的錯誤模式識別（Pattern Recognition）如何誤把雜音當成鬼魂。"
+              }
+            }
+            請確保不要包含任何 markdown 代碼塊標記 (如 \`\`\`json 或 \`\`\`)，直接輸出 JSON 純文字以便程式解析。`;
+
+            try {
+                // 使用支援的預覽模型 gemini-2.5-flash-preview-09-2025
+                const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+                
+                const payload = {
+                    contents: [
+                        { parts: [{ text: `此時發生的靈異現象描述如下：\n${story}` }] }
+                    ],
+                    systemInstruction: {
+                        parts: [{ text: systemPrompt }]
+                    },
+                    generationConfig: {
+                        responseMimeType: "application/json"
+                    }
+                };
+
+                const data = await fetchWithRetry(url, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const responseText = data.candidates?.[0]?.content?.parts?.[0]?.text;
+                if (!responseText) {
+                    throw new Error("API 傳回數據結構無效，未偵測到文本生成內容。");
+                }
+
+                // 解析 JSON
+                const parsedResult = JSON.parse(responseText.trim());
+                
+                analysisCache.classical = parsedResult.classical;
+                analysisCache.quantum = parsedResult.quantum;
+                analysisCache.neuro = parsedResult.neuro;
+
+                // 停止 Loading 並展示結果
+                stopLoading();
+                const resultPanel = document.getElementById('resultPanel');
+                resultPanel.classList.remove('hidden');
+                
+                // 漸現效果
+                setTimeout(() => {
+                    resultPanel.classList.remove('translate-y-4', 'opacity-0');
+                    switchTab('classical');
+                    resultPanel.scrollIntoView({ behavior: 'smooth' });
+                }, 50);
+
+            } catch (error) {
+                console.error("解構失敗：", error);
+                stopLoading();
+                showError("無法與總署的量子超算連線。這可能是因為連線超時、無網路、或 API 呼叫限制。已為您啟動「應急物理超渡核心」進行本地解算。");
+                
+                // 本地模擬回應備份
+                useLocalFallback(story);
+            }
+        }
+
+        // 本地預置模擬回應 (Fallback)
+        function useLocalFallback(story) {
+            analysisCache = {
+                classical: {
+                    principle: "熱力學第二定律 & 聲學縱波之空氣介質諧振",
+                    text: `本局已針對此事件進行古典物理學解構。你所觀測到的現象，本質上是周邊物質系統在「熵增」過程中的能量微調。不論是溫度突然下降（其實是空氣局部熱對流導致的溫差氣流），或是神秘的聲音（由於建築材料因白天吸收熱能、深夜降溫釋放而產生的「微應力結構應變」），其能量縱波在你的空間幾何形狀下形成了物理駐波。這完全是合理的經典力學現象，幽靈干涉機率為零。`
+                },
+                quantum: {
+                    principle: "多世界詮釋下的平行宇宙波函數干涉效應",
+                    text: `在量子力學多世界詮釋下，所有的可能性都是同時存在的。你在「${story.substring(0, 10)}...」中經歷的現象，其實是由於微觀粒子在特定的重力勢阱與室溫波動下，產生了宏觀尺度上極為罕見的「量子相干性干涉」。簡單來說，平行宇宙中另一個正在做家事或走動的你，其物體波動與你所在的宇宙發生了微弱的量子相干。你沒有遇到鬼，你只是不小心觀測到了多維宇宙的自己，請保持平常心。`
+                },
+                neuro: {
+                    principle: "網狀激活系統 (RAS) 疲勞與初級聽覺皮層信號過度擬合",
+                    text: `從神經生物學與認知化學來看，這屬於標準的「大腦演化過載反應」。當人體處於深夜、疲憊、或半睡眠狀態時，大腦負責過濾噪音的「網狀激活系統」效率降低。同時，大腦皮層為了保護你免受掠食者攻擊，會將空氣管道流動聲或窗外風聲等微弱背景噪音，強制「過度擬合（Overfitting）」為我們最熟悉的有威脅圖案（例如：腳步聲、被子被拉扯的力道、或是人聲）。多喝水、保持良好睡眠，神經遞質即會回復正常水準。`
+                }
+            };
+
+            const resultPanel = document.getElementById('resultPanel');
+            resultPanel.classList.remove('hidden');
+            setTimeout(() => {
+                resultPanel.classList.remove('translate-y-4', 'opacity-0');
+                switchTab('classical');
+                resultPanel.scrollIntoView({ behavior: 'smooth' });
+            }, 50);
+        }
+    </script>
+</body>
+</html>
